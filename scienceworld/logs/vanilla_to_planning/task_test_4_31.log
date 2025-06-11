@@ -1,0 +1,1136 @@
+INFO - ========== Task Name: chemistry-mix-paint-tertiary-color | Task ID: 4-31 ==========
+INFO - Task: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a drawing
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Agent Plan: Plan: First, I will go to the workshop. Then, I will mix blue and red paint to create the intermediate (secondary color) paint. After that, I will focus on the intermediate (secondary color) paint. Next, I will mix the intermediate (secondary color) paint with white to create violet paint. Finally, I will focus on the violet paint.
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a drawing
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: You move to the workshop.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a table. On the table is: a battery, a blue wire, a green light bulb, which is off, a orange wire, a red light bulb, which is off, a red wire, a switch, which is off, a yellow light bulb, which is off.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in ultra low temperature freezer
+INFO - Observation: The ultra low temperature freezer isn't open, so you can't see inside.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on red light bulb
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a table. On the table is: a battery, a blue wire, a green light bulb, which is off, a orange wire, a red light bulb, which is off, a red wire, a switch, which is off, a yellow light bulb, which is off.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on red light bulb' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'intermediate (secondary color) paint' or 'violet paint'.
+Using 'focus on red light bulb' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'red light bulb'. Task requires focus on items related to: 'intermediate (secondary color) paint' or 'violet paint'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at red light bulb
+INFO - Observation: a red light bulb, which is off. its anode is connected to: nothing. its cathode is connected to: nothing.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to art studio
+INFO - Observation: You move to the art studio.
+INFO - Score: 13
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing blue paint)
+	a wood cup (containing yellow paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 13
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open wood cup containing blue paint
+INFO - Observation: The wood cup is not openable.
+INFO - Score: 13
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open wood cup containing yellow paint
+INFO - Observation: The wood cup is not openable.
+INFO - Score: 13
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open wood cup containing red paint
+INFO - Observation: The wood cup is not openable.
+INFO - Score: 13
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up wood cup containing red paint
+INFO - Observation: You move the wood cup to the inventory.
+INFO - Score: 13
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up wood cup containing blue paint
+INFO - Observation: You move the wood cup to the inventory.
+INFO - Score: 13
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into wood cup containing red paint
+INFO - Observation: You pour the contents of the wood cup into the wood cup.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on intermediate (secondary color) paint
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on intermediate (secondary color) paint' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'intermediate (secondary color) paint' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''intermediate (secondary color) paint'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on intermediate (secondary color) paint'.
+WARNING - Handling focus failure based on observation content for target 'intermediate (secondary color) paint'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix wood cup containing red paint and blue paint
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'mix wood cup containing red paint and blue paint' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix wood cup containing red paint and blue paint'.
+WARNING - Handling failure based on observation content for standard action 'mix wood cup containing red paint and blue paint'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into wood cup containing blue paint
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into wood cup containing blue paint' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into wood cup containing blue paint'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into wood cup containing blue paint'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into wood cup containing blue paint
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into wood cup containing blue paint' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into wood cup containing blue paint'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into wood cup containing blue paint'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing red paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing red paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing red paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour wood cup containing blue paint into glass cup' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour wood cup containing blue paint into glass cup'.
+WARNING - Handling failure based on observation content for standard action 'pour wood cup containing blue paint into glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------

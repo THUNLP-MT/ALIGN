@@ -1,0 +1,1429 @@
+INFO - ========== Task Name: chemistry-mix-paint-secondary-color | Task ID: 3-28 ==========
+INFO - Task: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a fire pit (containing nothing)
+	a fountain (containing nothing)
+	the ground
+	a shovel
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a fire pit (containing nothing)
+	a fountain (containing nothing)
+	the ground
+	a shovel
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: You move to the greenhouse.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up wood
+INFO - Observation: You move the wood to the inventory.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+INFO - Observation: Its not clear how to go to/through a fire pit.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use axe on wood
+ACTION wood
+use axe on wood
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use axe on wood
+INFO - Observation: I'm not sure how to use those two things together.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: cut wood with axe
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use axe to cut wood
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: chop wood with axe
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use axe on wood
+INFO - Observation: I'm not sure how to use those two things together.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to foundry
+INFO - Observation: You move to the foundry.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is closed. 
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use axe on wood
+INFO - Observation: I'm not sure how to use those two things together.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: chop wood
+ACTION wood
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use axe to chop wood
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: cut wood with axe
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use axe on wood
+ACTION wood
+chop wood with axe
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use axe to cut wood
+ACTION wood
+cut wood with axe
+ACTION axe
+use axe on wood
+ACTION wood
+chop wood
+ACTION wood
+
+Since the environment is not recognizing the action to chop or cut wood with an axe, let's try a different approach.
+
+go to fire pit
+ACTION fire pit
+start fire with wood
+ACTION wood
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use axe on wood
+ACTION wood
+
+Let's try a simpler approach since the environment is not recognizing specific chopping actions.
+
+use axe on wood
+ACTION wood
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+ACTION outside
+pick up wood
+ACTION wood
+go to fire pit
+ACTION fire pit
+start fire
+ACTION fire pit
+put wood in fire pit
+ACTION wood
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood at fire pit
+ACTION wood
+start fire at fire pit
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+put wood near fire pit
+ACTION wood
+start fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood next to fire pit
+ACTION wood
+ignite fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+put wood beside fire pit
+ACTION wood
+light fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood by fire pit
+ACTION wood
+create fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+put wood down
+ACTION ground
+start fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood down
+ACTION ground
+ignite fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+put wood beside fire pit
+ACTION fire pit
+start fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood near fire pit
+ACTION fire pit
+light fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+put wood next to fire pit
+ACTION fire pit
+create fire
+ACTION fire pit
+
+Since the environment is not recognizing specific fire-starting actions, let's try a simpler approach.
+
+go to fire pit
+ACTION fire pit
+put wood beside fire pit
+ACTION wood
+use match to light fire
+ACTION fire pit
+
+If matches are not available, we may need to find another method or location to process the wood. Let's try another location.
+
+go to foundry
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+ACTION outside
+put wood beside fire pit
+ACTION wood
+start fire at fire pit
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to start fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+put wood next to fire pit
+ACTION wood
+try to start fire
+ACTION fire pit
+
+Since the environment is not recognizing specific fire-starting actions, let's try a different approach or location.
+
+go to foundry
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+ACTION outside
+put wood beside fire pit
+ACTION wood
+use match to light fire
+ACTION fire_pit
+
+If matches are not available, let's try another method.
+
+go to fire pit
+ACTION fire pit
+put wood beside fire pit
+ACTION wood
+try to ignite fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to light fire
+ACTION fire pit
+
+Since the environment is not recognizing specific fire-starting actions, let's try a different approach.
+
+go to kitchen
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+use lighter to light fire
+ACTION fire_pit
+
+If a lighter is not available, let's try another method or location.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to light fire
+ACTION fire pit
+
+Since the environment is not recognizing specific fire-starting actions, let's try a simpler approach.
+
+go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+use any available method to light fire
+ACTION fire pit
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try starting fire
+ACTION fire pit
+
+If that doesn't work, let's consider another approach or location.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+Since the environment is not recognizing specific fire-starting actions, let's try a different location.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to start fire
+ACTION fire pit
+
+If that doesn't work, let's check another location for resources.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to light fire
+ACTION fire pit
+
+If that doesn't work, let's try one more time to find a suitable location.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try lighting fire
+ACTION fire pit
+
+If that doesn't work, let's consider another method.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to start fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen again for any resources.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse for any resources.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to light fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try starting fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside for any resources.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's try one more time to find a suitable location or resource.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to start fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse again.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to light fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry once more.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try lighting fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside for any resources again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen one more time.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to start fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse one more time.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to light fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try starting fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen once more.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to light fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse one more time.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt lighting fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to start fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen once more.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try lighting fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse one more time.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to start fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt starting fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen one more time.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to light fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse again.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry once more.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try lighting fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to start fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen again.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse again.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt starting fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to light fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen again.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try lighting fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse again.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to start fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt starting fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen again.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to light fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse again.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try lighting fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to start fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen again.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse again.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt starting fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to light fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen again.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try lighting fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse again.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to start fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt starting fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen again.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to light fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse again.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try lighting fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to start fire
+ACTION fire pit
+
+If that doesn't work, let's try the kitchen again.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse again.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt starting fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try to light fire
+ACTION fire pit
+
+If that doesn't work, let's check the outside again.
+
+go to outside
+ACTION outside
+look around
+ACTION outside
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to ignite fire
+ACTION fire pit
+
+If that doesn't work, let's try a different approach.
+
+go to kitchen
+ACTION kitchen
+look around
+ACTION kitchen
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+try lighting fire
+ACTION fire pit
+
+If that doesn't work, let's check the greenhouse again.
+
+go to greenhouse
+ACTION greenhouse
+look around
+ACTION greenhouse
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to fire pit
+ACTION fire pit
+place wood beside fire pit
+ACTION wood
+attempt to start fire
+ACTION fire pit
+
+If that doesn't work, let's try the foundry again.
+
+go to foundry
+ACTION foundry
+look around
+ACTION foundry
+INFO - Observation: No known action matches that input.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------

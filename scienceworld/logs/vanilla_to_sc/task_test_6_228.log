@@ -1,0 +1,3223 @@
+INFO - ========== Task Name: find-living-thing | Task ID: 6-228 ==========
+INFO - Task: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in fridge
+INFO - Observation: The fridge isn't open, so you can't see inside.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in freezer
+INFO - Observation: The freezer isn't open, so you can't see inside.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: The cupboard isn't open, so you can't see inside.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open cupboard
+INFO - Observation: The cupboard is now open.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: Inside the cupboard is: 
+	a ceramic cup (containing nothing)
+	a drawer
+	a metal pot (containing nothing)
+	a tin cup (containing nothing)
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close cupboard
+INFO - Observation: The cupboard is now closed.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bathroom
+INFO - Observation: You move to the bathroom.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in toilet
+INFO - Observation: Inside the toilet is: 
+	a substance called water
+
+ You also see: A drain, which is closed.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the bathroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the bathroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom from bathroom
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom from bathroom' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to bedroom' or 'go to hallway'). Specifying the source location using 'from bathroom' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the bathroom) and then use 'go to [valid exit]'.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to bedroom from bathroom'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the bathroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the bathroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the bathroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the bathroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in fridge
+INFO - Observation: The fridge isn't open, so you can't see inside.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open fridge
+INFO - Observation: The fridge is now open.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in fridge
+INFO - Observation: Inside the fridge is: 
+	a wood cup (containing orange juice)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take orange from fridge
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is open. In the fridge is: a wood cup (containing orange juice).
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take orange from fridge' uses invalid syntax.
+Reason: The action 'take orange from fridge' is not supported in this environment.
+To get items from containers like 'fridge', you usually need to 'pick up fridge' first, or check if you can 'move orange to inventory'.
+Your action was not executed.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take orange from fridge'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up fridge
+INFO - Observation: The fridge is not moveable.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open drawer in counter
+INFO - Observation: The drawer is now open.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in drawer
+INFO - Observation: Inside the drawer is: 
+	nothing
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close drawer
+INFO - Observation: The drawer is now closed.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a painting
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on white pillow
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on white pillow' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on white pillow' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'white pillow'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open closet
+INFO - Observation: The closet is now open.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close closet
+INFO - Observation: The closet is now closed.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bathroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bathroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bathroom' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bathroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bathroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bathroom' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open closet
+INFO - Observation: The closet is now open.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close closet
+INFO - Observation: The closet is now closed.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bathroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bathroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bathroom' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bathroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bathroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bathroom' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open closet
+INFO - Observation: The closet is now open.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close closet
+INFO - Observation: The closet is now closed.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a painting
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is open. In the fridge is: a wood cup (containing orange juice).
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open fridge
+INFO - Observation: The fridge is already open.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in fridge
+INFO - Observation: Inside the fridge is: 
+	a wood cup (containing orange juice)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take orange from fridge
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is open. In the fridge is: a wood cup (containing orange juice).
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take orange from fridge' uses invalid syntax.
+Reason: The action 'take orange from fridge' is not supported in this environment.
+To get items from containers like 'fridge', you usually need to 'pick up fridge' first, or check if you can 'move orange to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take orange from fridge'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up fridge
+INFO - Observation: The fridge is not moveable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open drawer in counter
+INFO - Observation: The drawer is now open.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in drawer
+INFO - Observation: Inside the drawer is: 
+	nothing
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close drawer
+INFO - Observation: The drawer is now closed.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bathroom
+INFO - Observation: You move to the bathroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - ========== Task Name: find-living-thing | Task ID: 6-228 ==========
+INFO - Task: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in fridge
+INFO - Observation: The fridge isn't open, so you can't see inside.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in freezer
+INFO - Observation: The freezer isn't open, so you can't see inside.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: The cupboard isn't open, so you can't see inside.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open cupboard
+INFO - Observation: The cupboard is now open.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: Inside the cupboard is: 
+	a ceramic cup (containing nothing)
+	a drawer
+	a metal pot (containing nothing)
+	a tin cup (containing nothing)
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close cupboard
+INFO - Observation: The cupboard is now closed.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a painting
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open closet
+INFO - Observation: The closet is now open.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close closet
+INFO - Observation: The closet is now closed.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: You move to the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in couch
+INFO - Observation: Inside the couch is: 
+	a white pillow
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on white pillow
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on white pillow' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on white pillow' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'white pillow'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on white pillow
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on white pillow' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on white pillow' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'white pillow'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up couch' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up couch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'look at couch' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'look at couch'.
+WARNING - Handling failure based on observation content for standard action 'look at couch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look in couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'look in couch' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'look in couch'.
+WARNING - Handling failure based on observation content for standard action 'look in couch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open closet
+INFO - Observation: The closet is now open.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close closet
+INFO - Observation: The closet is now closed.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: You move to the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on white pillow
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on white pillow' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on white pillow' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'white pillow'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look in couch
+INFO - Observation: Inside the couch is: 
+	a white pillow
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - ========== Task Name: find-living-thing | Task ID: 6-228 ==========
+INFO - Task: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in fridge
+INFO - Observation: The fridge isn't open, so you can't see inside.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in freezer
+INFO - Observation: The freezer isn't open, so you can't see inside.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: The cupboard isn't open, so you can't see inside.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open cupboard
+INFO - Observation: The cupboard is now open.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: Inside the cupboard is: 
+	a ceramic cup (containing nothing)
+	a drawer
+	a metal pot (containing nothing)
+	a tin cup (containing nothing)
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close cupboard
+INFO - Observation: The cupboard is now closed.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a painting
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open closet
+INFO - Observation: The closet is now open.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close closet
+INFO - Observation: The closet is now closed.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: You move to the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in couch
+INFO - Observation: Inside the couch is: 
+	a white pillow
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on white pillow
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on white pillow' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on white pillow' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'white pillow'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on white pillow
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on white pillow' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on white pillow' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'white pillow'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up couch' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up couch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'look at couch' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'look at couch'.
+WARNING - Handling failure based on observation content for standard action 'look at couch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look in couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'look in couch' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'look in couch'.
+WARNING - Handling failure based on observation content for standard action 'look in couch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open closet
+INFO - Observation: The closet is now open.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close closet
+INFO - Observation: The closet is now closed.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: You move to the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on white pillow
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on white pillow' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on white pillow' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'white pillow'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look in couch
+INFO - Observation: Inside the couch is: 
+	a white pillow
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up couch
+INFO - Observation: You move the couch to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed.
+Reason: You cannot use 'go to bedroom' because you are already in that location (the bedroom).
+Suggestion: Use 'look around' to see available exits to other locations.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected ambiguous feedback 'It's not clear how to get there from here.' after 'go to bedroom'. Assuming agent tried to go to current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down couch in bedroom
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down couch in bedroom' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down couch in bedroom'.
+WARNING - Handling failure based on observation content for standard action 'put down couch in bedroom'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open couch
+INFO - Observation: The couch is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take white pillow from couch' uses invalid syntax.
+Reason: The action 'take white pillow from couch' is not supported in this environment.
+To get items from containers like 'couch', you usually need to 'pick up couch' first, or check if you can 'move white pillow to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take white pillow from couch'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up white pillow from couch
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up white pillow from couch' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up white pillow from couch' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up couch'. You might then be able to access its contents.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up white pillow from couch'.
+WARNING - Handling failure based on observation content for standard action 'pick up white pillow from couch'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up white pillow from couch'. Suggesting 'pick up couch'.
+
+
+INFO - ---------------------------------

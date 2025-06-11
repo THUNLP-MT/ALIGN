@@ -1,0 +1,1025 @@
+INFO - ========== Task Name: identify-life-stages-1 | Task ID: 12-9 ==========
+INFO - Task: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at bed
+INFO - Observation: a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in bed
+INFO - Observation: Inside the bed is: 
+	a mattress. On the mattress is: a white pillow.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at mattress
+INFO - Observation: a mattress. On the mattress is: a white pillow.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in mattress
+INFO - Observation: Inside the mattress is: 
+	a white pillow
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at pillow
+INFO - Observation: a white pillow
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on white pillow
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on white pillow' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the giant tortoise, starting from earliest to latest'.
+Using 'focus on white pillow' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'white pillow'. Task requires focus on items related to: '4 life stages of the giant tortoise, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to closet
+INFO - Observation: Its not clear how to go to/through a closet.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open closet door
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'open closet door' failed (Observation: "No known action matches that input.").
+Reason: The syntax might be incorrect. To open objects like 'closet', try using the command 'open closet' instead of specifying 'door'.
+Suggestion: Please check the object name and try the suggested syntax.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'open closet door'.
+WARNING - Handling failure based on observation content for standard action 'open closet door'. Failure phrase: 'no known action'.
+INFO - Detected failed 'open ... door' syntax for 'open closet door'. Suggesting 'open closet'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open closet
+INFO - Observation: The closet is now open.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a picture
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to greenhouse' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'greenhouse' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to greenhouse'.
+WARNING - Handling failure based on observation content for standard action 'go to greenhouse'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to greenhouse' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a picture
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a picture
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to greenhouse' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'greenhouse' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to greenhouse'.
+WARNING - Handling failure based on observation content for standard action 'go to greenhouse'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to greenhouse' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a picture
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------

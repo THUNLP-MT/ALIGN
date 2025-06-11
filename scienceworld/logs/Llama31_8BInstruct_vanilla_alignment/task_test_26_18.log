@@ -1,0 +1,1294 @@
+INFO - ========== Task Name: power-component-renewable-vs-nonrenewable-energy | Task ID: 26-18 ==========
+INFO - Task: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a drawing
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a drawing
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: You move to the workshop.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on electric buzzer
+INFO - Observation: You focus on the electric buzzer.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at wind generator
+INFO - Observation: a wind generator, which is off. its anode is connected to: nothing. its cathode is connected to: nothing.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: de/activate wind generator
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'de/activate wind generator' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'de/activate wind generator'.
+WARNING - Handling failure based on observation content for standard action 'de/activate wind generator'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator to switch
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator cathode to switch
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch cathode
+INFO - Observation: anode on wind generator is now connected to cathode on switch
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect switch to electric buzzer
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect switch cathode to electric buzzer anode
+INFO - Observation: cathode on switch is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect switch cathode from wind generator anode
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect switch cathode from wind generator anode' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect switch cathode from wind generator anode'.
+WARNING - Handling failure based on observation content for standard action 'disconnect switch cathode from wind generator anode'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch cathode
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch cathode' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch cathode'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch cathode'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from nothing
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from nothing' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from nothing'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from nothing'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch cathode
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch cathode' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch cathode'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch cathode'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer anode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer anode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer anode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer anode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: de/activate wind generator
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'de/activate wind generator' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'de/activate wind generator'.
+WARNING - Handling failure based on observation content for standard action 'de/activate wind generator'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: deactivate wind generator
+INFO - Observation: The wind generator is not something that can be activated.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on electric buzzer
+INFO - Observation: You focus on the electric buzzer.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator to switch
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer anode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator cathode to electric buzzer anode
+INFO - Observation: cathode on wind generator is now connected to anode on electric buzzer
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect switch cathode to electric buzzer anode
+INFO - Observation: cathode on switch is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect switch cathode from wind generator cathode
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect switch cathode from wind generator cathode' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect switch cathode from wind generator cathode'.
+WARNING - Handling failure based on observation content for standard action 'disconnect switch cathode from wind generator cathode'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect switch cathode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect switch cathode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect switch cathode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect switch cathode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect switch cathode to electric buzzer anode
+INFO - Observation: cathode on switch is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect switch cathode from wind generator cathode
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect switch cathode from wind generator cathode' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect switch cathode from wind generator cathode'.
+WARNING - Handling failure based on observation content for standard action 'disconnect switch cathode from wind generator cathode'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator cathode from electric buzzer anode
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator cathode from electric buzzer anode' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator cathode from electric buzzer anode'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator cathode from electric buzzer anode'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator cathode to electric buzzer cathode
+INFO - Observation: cathode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator cathode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator cathode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator cathode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator cathode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator cathode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator cathode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator cathode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator cathode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator cathode to electric buzzer cathode
+INFO - Observation: cathode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: deactivate wind generator
+INFO - Observation: The wind generator is not something that can be activated.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on electric buzzer
+INFO - Observation: You focus on the electric buzzer.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer anode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer anode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator cathode to electric buzzer anode
+INFO - Observation: cathode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator cathode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator cathode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator cathode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator cathode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator cathode to electric buzzer cathode
+INFO - Observation: cathode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: deactivate wind generator
+INFO - Observation: The wind generator is not something that can be activated.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on electric buzzer
+INFO - Observation: You focus on the electric buzzer.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer anode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator cathode to electric buzzer anode
+INFO - Observation: cathode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator cathode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator cathode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator cathode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator cathode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator cathode to electric buzzer cathode
+INFO - Observation: cathode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: deactivate wind generator
+INFO - Observation: The wind generator is not something that can be activated.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on electric buzzer
+INFO - Observation: You focus on the electric buzzer.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer anode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: deactivate wind generator
+INFO - Observation: The wind generator is not something that can be activated.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on electric buzzer
+INFO - Observation: You focus on the electric buzzer.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from switch
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from switch' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from switch'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from switch'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer anode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: disconnect wind generator anode from electric buzzer
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a blue light bulb, which is off
+	a electric buzzer, which is off
+	a electric motor, which is off
+	a gas generator, which is off
+	a red light bulb, which is off
+	a table. On the table is: a battery, a black wire, a green light bulb, which is off, a green wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+	a wind generator, which is off
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'disconnect wind generator anode from electric buzzer' did not succeed as expected in the workshop (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 43
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'disconnect wind generator anode from electric buzzer'.
+WARNING - Handling failure based on observation content for standard action 'disconnect wind generator anode from electric buzzer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to electric buzzer cathode
+INFO - Observation: anode on wind generator is already connected, and must be disconnected before it can be connected to something else
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: deactivate wind generator
+INFO - Observation: The wind generator is not something that can be activated.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on electric buzzer
+INFO - Observation: You focus on the electric buzzer.
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: connect wind generator anode to switch
+INFO - Observation: Connections must specify specific points of contact on polarized electrical components (e.g. anode, cathode)
+INFO - Score: 43
+INFO - Done: False
+INFO - ---------------------------------

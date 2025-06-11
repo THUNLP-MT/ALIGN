@@ -1,0 +1,726 @@
+INFO - ========== Task Name: test-conductivity | Task ID: 27-677 ==========
+INFO - Task: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Agent Action: focus on glass jar
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on glass jar' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'sodium chloride'.
+Using 'focus on glass jar' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'glass jar'. Task requires focus on items related to: 'sodium chloride'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up glass jar
+INFO - Observation: You move the glass jar to the inventory.
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on sodium chloride
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sodium chloride' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sodium chloride' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sodium chloride'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sodium chloride'.
+WARNING - Handling focus failure based on observation content for target 'sodium chloride'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at glass jar
+INFO - Observation: a glass jar (containing a substance called sodium chloride)
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: deactivate stopwatch
+INFO - Observation: The stopwatch is already deactivated.
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: wait 10
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 10' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 10 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 10'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait 1
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 1' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 1 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 1'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait
+INFO - Observation: You decide to wait for 10 iterations.
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: wait 10
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 10' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 10 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 10'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait 1
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 1' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 1 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 1'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait
+INFO - Observation: You decide to wait for 10 iterations.
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: wait 10
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 10' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 10 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 10'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait 1
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 1' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 1 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 1'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait
+INFO - Observation: You decide to wait for 10 iterations.
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: wait 10
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 10' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 10 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 10'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait 1
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 1' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 1 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 1'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait
+INFO - Observation: You decide to wait for 10 iterations.
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: wait 10
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 10' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 10 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 10'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait 1
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 1' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 1 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 1'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait
+INFO - Observation: You decide to wait for 10 iterations.
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: wait 10
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 10' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 10 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 10'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait 1
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 1' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 1 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 1'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait
+INFO - Observation: You decide to wait for 10 iterations.
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: wait 10
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 11 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 10' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 10 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 10'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait 1
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 11 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 1' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 1 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 1'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait
+INFO - Observation: You decide to wait for 10 iterations.
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: wait 10
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 11 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 10' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 10 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 10'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait 1
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 11 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 1' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 1 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 1'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait
+INFO - Observation: You decide to wait for 10 iterations.
+INFO - Score: 5
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: wait 10
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 11 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 10' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 10 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 10'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait 1
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 11 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 1' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 1 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 5
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 1'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: wait
+INFO - Observation: You decide to wait for 10 iterations.
+INFO - Score: 5
+INFO - Done: True
+INFO - ---------------------------------

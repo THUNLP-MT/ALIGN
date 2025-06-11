@@ -1,0 +1,827 @@
+INFO - ========== Task Name: change-the-state-of-matter-of | Task ID: 1-23 ==========
+INFO - Task: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is open, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is open, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in toilet
+INFO - Observation: Inside the toilet is: 
+	a substance called water
+
+ You also see: A drain, which is open.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in glass cup
+INFO - Observation: Inside the glass cup is: 
+	nothing
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: The cupboard isn't open, so you can't see inside.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open cupboard
+INFO - Observation: The cupboard is now open.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: Inside the cupboard is: 
+	a ceramic cup (containing nothing)
+	a drawer
+	a metal pot (containing nothing)
+	a tin cup (containing nothing)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on tin cup' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on tin cup' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'tin cup'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up tin cup from cupboard
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up tin cup from cupboard' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up tin cup from cupboard' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up cupboard'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up tin cup from cupboard'.
+WARNING - Handling failure based on observation content for standard action 'pick up tin cup from cupboard'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up tin cup from cupboard'. Suggesting 'pick up cupboard'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up cupboard
+INFO - Observation: You move the cupboard to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down cupboard on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'put down cupboard on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down cupboard on table'.
+WARNING - Handling failure based on observation content for standard action 'put down cupboard on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open cupboard on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'open cupboard on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'open cupboard on table'.
+WARNING - Handling failure based on observation content for standard action 'open cupboard on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up tin cup from cupboard on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up tin cup from cupboard on table' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up tin cup from cupboard on table' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up cupboard on table'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up tin cup from cupboard on table'.
+WARNING - Handling failure based on observation content for standard action 'pick up tin cup from cupboard on table'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up tin cup from cupboard on table'. Suggesting 'pick up cupboard on table'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up cupboard on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up cupboard on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up cupboard on table'.
+WARNING - Handling failure based on observation content for standard action 'pick up cupboard on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up tin cup from cupboard
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up tin cup from cupboard' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up tin cup from cupboard' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up cupboard'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up tin cup from cupboard'.
+WARNING - Handling failure based on observation content for standard action 'pick up tin cup from cupboard'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up tin cup from cupboard'. Suggesting 'pick up cupboard'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up cupboard
+INFO - Observation: You move the cupboard to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open cupboard
+INFO - Observation: The cupboard is already open.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up tin cup from cupboard
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up tin cup from cupboard' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up tin cup from cupboard' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up cupboard'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up tin cup from cupboard'.
+WARNING - Handling failure based on observation content for standard action 'pick up tin cup from cupboard'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up tin cup from cupboard'. Suggesting 'pick up cupboard'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move tin cup to table
+INFO - Observation: You move the tin cup to the table.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on tin cup' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on tin cup' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'tin cup'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up lighter from counter
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up lighter from counter' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up lighter from counter' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up counter'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up lighter from counter'.
+WARNING - Handling failure based on observation content for standard action 'pick up lighter from counter'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up lighter from counter'. Suggesting 'pick up counter'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up lighter
+INFO - Observation: You move the lighter to the inventory.
+INFO - Score: 1
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+INFO - Observation: The lighter heats up the tin cup a small amount.
+INFO - Score: 1
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+INFO - Observation: The lighter heats up the tin cup a small amount.
+INFO - Score: 1
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+INFO - Observation: The lighter heats up the tin cup a small amount.
+INFO - Score: 1
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: wait 1
+
+# Heat the tin cup more thoroughly by continuing to use the lighter.
+
+use lighter on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'wait 1
+
+# Heat the tin cup more thoroughly by continuing to use the lighter.
+
+use lighter on tin cup' uses an invalid format or duration.
+Reason: The environment only supports waiting for a single time step using the command 'wait1' (no space between 'wait' and '1'). Waiting for 1 steps is not supported.
+Your action was not executed. Please use 'wait1' if you intend to wait.
+INFO - Score: 1
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid wait command: 'wait 1
+
+# Heat the tin cup more thoroughly by continuing to use the lighter.
+
+use lighter on tin cup'. Only 'wait1' is supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+wait1
+use lighter on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use lighter on tin cup
+wait1
+use lighter on tin cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 1
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'.
+WARNING - Handling failure based on observation content for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+wait1
+use lighter on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use lighter on tin cup
+wait1
+use lighter on tin cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 1
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'.
+WARNING - Handling failure based on observation content for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+wait1
+use lighter on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use lighter on tin cup
+wait1
+use lighter on tin cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 1
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'.
+WARNING - Handling failure based on observation content for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+wait1
+use lighter on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use lighter on tin cup
+wait1
+use lighter on tin cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 1
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'.
+WARNING - Handling failure based on observation content for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+wait1
+use lighter on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use lighter on tin cup
+wait1
+use lighter on tin cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 1
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'.
+WARNING - Handling failure based on observation content for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+wait1
+use lighter on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use lighter on tin cup
+wait1
+use lighter on tin cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 1
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'.
+WARNING - Handling failure based on observation content for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+wait1
+use lighter on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use lighter on tin cup
+wait1
+use lighter on tin cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 1
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'.
+WARNING - Handling failure based on observation content for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on tin cup
+wait1
+use lighter on tin cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing), a tin cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use lighter on tin cup
+wait1
+use lighter on tin cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 1
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'.
+WARNING - Handling failure based on observation content for standard action 'use lighter on tin cup
+wait1
+use lighter on tin cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------

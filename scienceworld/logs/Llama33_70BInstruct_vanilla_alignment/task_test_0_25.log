@@ -1,0 +1,595 @@
+INFO - ========== Task Name: boil | Task ID: 0-25 ==========
+INFO - Task: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at mercury
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'look at mercury' did not succeed as expected in the greenhouse (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'look at mercury'.
+WARNING - Handling failure based on observation content for standard action 'look at mercury'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a drawing
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: You move to the workshop.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a table. On the table is: a battery, a green wire, a orange light bulb, which is off, a orange wire, a plastic cup (containing a substance called mercury), a red light bulb, which is off, a switch, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at mercury
+INFO - Observation: a substance called mercury
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on mercury
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a table. On the table is: a battery, a green wire, a orange light bulb, which is off, a orange wire, a plastic cup (containing a substance called mercury), a red light bulb, which is off, a switch, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on mercury' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on mercury' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'mercury'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up plastic cup
+INFO - Observation: You move the plastic cup to the inventory.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a table. On the table is: a battery, a green wire, a orange light bulb, which is off, a orange wire, a red light bulb, which is off, a switch, which is off, a yellow light bulb, which is off, a yellow wire.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the workshop). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the workshop.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down plastic cup
+INFO - Observation: You move the plastic cup to the kitchen.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at plastic cup
+INFO - Observation: a plastic cup (containing a substance called mercury)
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on mercury in plastic cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a plastic cup (containing a substance called mercury)
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on mercury in plastic cup' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on mercury in plastic cup' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'mercury in plastic cup'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on mercury
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a plastic cup (containing a substance called mercury)
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on mercury' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on mercury' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'mercury'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: deactivate is not relevant here, instead use the stove to boil the mercury 
+use stove
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a plastic cup (containing a substance called mercury)
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'deactivate is not relevant here, instead use the stove to boil the mercury 
+use stove' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'deactivate is not relevant here, instead use the stove to boil the mercury 
+use stove'.
+WARNING - Handling failure based on observation content for standard action 'deactivate is not relevant here, instead use the stove to boil the mercury 
+use stove'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: activate stove
+INFO - Observation: The stove appears broken, and can't be activated or deactivated.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a plastic cup (containing a substance called mercury)
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use lighter' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use lighter'.
+WARNING - Handling failure based on observation content for standard action 'use lighter'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on mercury in plastic cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a plastic cup (containing a substance called mercury)
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 13 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on mercury in plastic cup' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on mercury in plastic cup' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'mercury in plastic cup'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on mercury
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a plastic cup (containing a substance called mercury)
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 16 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on mercury' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on mercury' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'mercury'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on mercury
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a plastic cup (containing a substance called mercury)
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 20 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on mercury' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on mercury' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'mercury'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on mercury in plastic cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a plastic cup (containing a substance called mercury)
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 24 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on mercury in plastic cup' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on mercury in plastic cup' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 3
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'mercury in plastic cup'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use lighter on plastic cup
+INFO - Observation: The lighter heats up the plastic cup a small amount.
+INFO - Score: 3
+INFO - Done: False
+INFO - ---------------------------------

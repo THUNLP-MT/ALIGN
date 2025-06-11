@@ -1,0 +1,1857 @@
+INFO - ========== Task Name: identify-life-stages-1 | Task ID: 12-11 ==========
+INFO - Task: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a painting
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: You move to the greenhouse.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in bee hive
+INFO - Observation: The bee hive isn't open, so you can't see inside.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: inventory
+INFO - Observation: In your inventory, you see:
+	a bee hive. The bee hive door is closed. 
+	an orange
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down bee hive
+INFO - Observation: You move the bee hive to the greenhouse.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is now open.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in bee hive
+INFO - Observation: Inside the bee hive is: 
+	a adult bee
+	a adult bee
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: a adult bee, a adult bee.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: a adult bee, a adult bee.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the greenhouse). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the greenhouse.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: a adult bee, a adult bee.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a painting
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: The cupboard isn't open, so you can't see inside.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open cupboard
+INFO - Observation: The cupboard is now open.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: Inside the cupboard is: 
+	a ceramic cup (containing nothing)
+	a drawer
+	a metal pot (containing nothing)
+	a tin cup (containing nothing)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to art studio
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to art studio' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'art studio' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to art studio'.
+WARNING - Handling failure based on observation content for standard action 'go to art studio'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to art studio' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to art studio
+INFO - Observation: You move to the art studio.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open large cupboard
+INFO - Observation: The large cupboard is now open.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in large cupboard
+INFO - Observation: Inside the large cupboard is: 
+	a drawer
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+	a wood cup (containing yellow paint)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on chick
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on chick' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on chick' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'chick'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the art studio). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the art studio.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open closet
+INFO - Observation: The closet is now open.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in closet
+INFO - Observation: Inside the closet is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is open. In the closet is: nothing.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on chick
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on chick' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on chick' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'chick'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on juvenile
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on juvenile' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on juvenile' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'juvenile'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on adult
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on adult' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on adult' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'adult'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on senior
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on senior' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on senior' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'senior'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on 4 life stages of the parrot, starting from earliest to latest
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on 4 life stages of the parrot, starting from earliest to latest' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object '4 life stages of the parrot, starting from earliest to latest' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''4 life stages of the parrot, starting from earliest to latest'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on 4 life stages of the parrot, starting from earliest to latest'.
+WARNING - Handling focus failure based on observation content for target '4 life stages of the parrot, starting from earliest to latest'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: I will try a different approach.
+
+Since I need to focus on the 4 life stages of the parrot, starting from earliest to latest, I will try to create the egg stage first.
+
+I will go to the greenhouse and try to create an egg.
+
+go to greenhouse
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'I will try a different approach.
+
+Since I need to focus on the 4 life stages of the parrot, starting from earliest to latest, I will try to create the egg stage first.
+
+I will go to the greenhouse and try to create an egg.
+
+go to greenhouse' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'I will try a different approach.
+
+Since I need to focus on the 4 life stages of the parrot, starting from earliest to latest, I will try to create the egg stage first.
+
+I will go to the greenhouse and try to create an egg.
+
+go to greenhouse'.
+WARNING - Handling failure based on observation content for standard action 'I will try a different approach.
+
+Since I need to focus on the 4 life stages of the parrot, starting from earliest to latest, I will try to create the egg stage first.
+
+I will go to the greenhouse and try to create an egg.
+
+go to greenhouse'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to greenhouse' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'greenhouse' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to greenhouse'.
+WARNING - Handling failure based on observation content for standard action 'go to greenhouse'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to greenhouse' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: You move to the greenhouse.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: inventory
+INFO - Observation: In your inventory, you see:
+	a bee hive. The bee hive door is open. In the bee hive is: 
+	nothing
+	an orange
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down bee hive
+INFO - Observation: You move the bee hive to the greenhouse.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is already open.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in bee hive
+INFO - Observation: Inside the bee hive is: 
+	nothing
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on chick
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on chick' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on chick' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'chick'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on juvenile
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on juvenile' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on juvenile' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'juvenile'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on adult
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on adult' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on adult' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'adult'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on senior
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on senior' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on senior' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'senior'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on 4 life stages of the parrot, starting from earliest to latest
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on 4 life stages of the parrot, starting from earliest to latest' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object '4 life stages of the parrot, starting from earliest to latest' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''4 life stages of the parrot, starting from earliest to latest'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on 4 life stages of the parrot, starting from earliest to latest'.
+WARNING - Handling focus failure based on observation content for target '4 life stages of the parrot, starting from earliest to latest'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen' did not succeed as expected in the greenhouse (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the greenhouse). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the greenhouse.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on 4 life stages of the parrot, starting from earliest to latest
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on 4 life stages of the parrot, starting from earliest to latest' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object '4 life stages of the parrot, starting from earliest to latest' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''4 life stages of the parrot, starting from earliest to latest'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on 4 life stages of the parrot, starting from earliest to latest'.
+WARNING - Handling focus failure based on observation content for target '4 life stages of the parrot, starting from earliest to latest'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the art studio and try to create an egg.
+
+go to art studio
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the art studio and try to create an egg.
+
+go to art studio' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the art studio and try to create an egg.
+
+go to art studio'.
+WARNING - Handling failure based on observation content for standard action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the art studio and try to create an egg.
+
+go to art studio'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to art studio
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to art studio' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'art studio' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to art studio'.
+WARNING - Handling failure based on observation content for standard action 'go to art studio'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to art studio' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to art studio
+INFO - Observation: You move to the art studio.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on 4 life stages of the parrot, starting from earliest to latest
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on 4 life stages of the parrot, starting from earliest to latest' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object '4 life stages of the parrot, starting from earliest to latest' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''4 life stages of the parrot, starting from earliest to latest'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on 4 life stages of the parrot, starting from earliest to latest'.
+WARNING - Handling focus failure based on observation content for target '4 life stages of the parrot, starting from earliest to latest'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the art studio). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the art studio.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on 4 life stages of the parrot, starting from earliest to latest
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on 4 life stages of the parrot, starting from earliest to latest' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object '4 life stages of the parrot, starting from earliest to latest' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''4 life stages of the parrot, starting from earliest to latest'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on 4 life stages of the parrot, starting from earliest to latest'.
+WARNING - Handling focus failure based on observation content for target '4 life stages of the parrot, starting from earliest to latest'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the art studio and try to create an egg.
+
+go to art studio
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the art studio and try to create an egg.
+
+go to art studio' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the art studio and try to create an egg.
+
+go to art studio'.
+WARNING - Handling failure based on observation content for standard action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the art studio and try to create an egg.
+
+go to art studio'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to art studio
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to art studio' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'art studio' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to art studio'.
+WARNING - Handling failure based on observation content for standard action 'go to art studio'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to art studio' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to art studio
+INFO - Observation: You move to the art studio.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on 4 life stages of the parrot, starting from earliest to latest
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on 4 life stages of the parrot, starting from earliest to latest' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object '4 life stages of the parrot, starting from earliest to latest' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''4 life stages of the parrot, starting from earliest to latest'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on 4 life stages of the parrot, starting from earliest to latest'.
+WARNING - Handling focus failure based on observation content for target '4 life stages of the parrot, starting from earliest to latest'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen' did not succeed as expected in the art studio (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'I will try to create the 4 life stages of the parrot, starting from earliest to latest.
+
+I will go to the kitchen and try to create an egg.
+
+go to kitchen'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the art studio). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the art studio.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing red paint), a wood cup (containing yellow paint).
+	a table. On the table is: a jug (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing blue paint)
+	a wood cup (containing red paint)
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on egg
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: '4 life stages of the parrot, starting from earliest to latest'.
+Using 'focus on egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'egg'. Task requires focus on items related to: '4 life stages of the parrot, starting from earliest to latest'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on 4 life stages of the parrot, starting from earliest to latest
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on 4 life stages of the parrot, starting from earliest to latest' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object '4 life stages of the parrot, starting from earliest to latest' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''4 life stages of the parrot, starting from earliest to latest'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 4
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on 4 life stages of the parrot, starting from earliest to latest'.
+WARNING - Handling focus failure based on observation content for target '4 life stages of the parrot, starting from earliest to latest'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------

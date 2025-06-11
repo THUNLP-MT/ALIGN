@@ -1,0 +1,1241 @@
+INFO - ========== Task Name: find-animal | Task ID: 5-226 ==========
+INFO - Task: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is closed. 
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is closed. 
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on blast furnace
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is closed. 
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on blast furnace' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on blast furnace' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 8
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'blast furnace'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at blast furnace
+INFO - Observation: a blast furnace, which is turned off. The blast furnace door is closed.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open blast furnace door
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is closed. 
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'open blast furnace door' failed (Observation: "No known action matches that input.").
+Reason: The syntax might be incorrect. To open objects like 'blast furnace', try using the command 'open blast furnace' instead of specifying 'door'.
+Suggestion: Please check the object name and try the suggested syntax.
+INFO - Score: 8
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'open blast furnace door'.
+WARNING - Handling failure based on observation content for standard action 'open blast furnace door'. Failure phrase: 'no known action'.
+INFO - Detected failed 'open ... door' syntax for 'open blast furnace door'. Suggesting 'open blast furnace'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open blast furnace
+INFO - Observation: The blast furnace is now open.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in blast furnace
+INFO - Observation: Inside the blast furnace is: 
+	nothing
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close blast furnace
+INFO - Observation: The blast furnace is now closed.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to outside door
+INFO - Observation: You move through the door to the outside.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a frog egg
+	a fire pit (containing nothing)
+	a fountain (containing a substance called water)
+	the ground
+	a shovel
+	a turtle egg
+	a baby wolf
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on baby wolf
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a frog egg
+	a fire pit (containing nothing)
+	a fountain (containing a substance called water)
+	the ground
+	a shovel
+	a turtle egg
+	a baby wolf
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'focus on baby wolf' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on baby wolf' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'baby wolf'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up baby wolf
+INFO - Observation: You move the wolf to the inventory.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a frog egg
+	a fire pit (containing nothing)
+	a fountain (containing a substance called water)
+	the ground
+	a shovel
+	a turtle egg
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (your current location). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from your current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a frog egg
+	a fire pit (containing nothing)
+	a fountain (containing a substance called water)
+	the ground
+	a shovel
+	a turtle egg
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on red apple
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on red apple' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on red apple' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'red apple'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up red apple
+INFO - Observation: You move the apple to the inventory.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to living room door
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to living room door' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room door' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room door'.
+WARNING - Handling failure based on observation content for standard action 'go to living room door'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room door' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: You move to the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down red apple
+INFO - Observation: You move the apple to the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing nothing)
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on red apple
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing nothing)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on red apple' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on red apple' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'red apple'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up red apple
+INFO - Observation: You move the apple to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to yellow box
+INFO - Observation: Its not clear how to go to/through a yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down red apple
+INFO - Observation: You move the apple to the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in yellow box
+INFO - Observation: Inside the yellow box is: 
+	nothing
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing nothing)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to kitchen' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'kitchen' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to kitchen'.
+WARNING - Handling failure based on observation content for standard action 'go to kitchen'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to kitchen' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on frog egg
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on frog egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on frog egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'frog egg'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up frog egg
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up frog egg' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up frog egg'.
+WARNING - Handling failure based on observation content for standard action 'pick up frog egg'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to outside door
+INFO - Observation: You move through the door to the outside.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a frog egg
+	a fire pit (containing nothing)
+	a fountain (containing a substance called water)
+	the ground
+	a shovel
+	a turtle egg
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on frog egg
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a frog egg
+	a fire pit (containing nothing)
+	a fountain (containing a substance called water)
+	the ground
+	a shovel
+	a turtle egg
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'focus on frog egg' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on frog egg' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'frog egg'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up frog egg
+INFO - Observation: You move the common toad to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a fire pit (containing nothing)
+	a fountain (containing a substance called water)
+	the ground
+	a shovel
+	a turtle egg
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (your current location). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from your current location.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen door
+INFO - Observation: You move through the door to the kitchen.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down frog egg
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'put down frog egg' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down frog egg'.
+WARNING - Handling failure based on observation content for standard action 'put down frog egg'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to living room door
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to living room door' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room door' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room door'.
+WARNING - Handling failure based on observation content for standard action 'go to living room door'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room door' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: You move to the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down frog egg
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing nothing)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down frog egg' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down frog egg'.
+WARNING - Handling failure based on observation content for standard action 'put down frog egg'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open yellow box
+INFO - Observation: The yellow box is not openable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put frog egg in yellow box
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing nothing)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put frog egg in yellow box' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put frog egg in yellow box'.
+WARNING - Handling failure based on observation content for standard action 'put frog egg in yellow box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: close yellow box
+INFO - Observation: The yellow box is not closeable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: inventory
+INFO - Observation: In your inventory, you see:
+	a tadpole
+	an orange
+	a juvenile wolf
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take tadpole out of inventory
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing nothing)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take tadpole out of inventory' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'take tadpole out of inventory'.
+WARNING - Handling failure based on observation content for standard action 'take tadpole out of inventory'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put tadpole in yellow box
+INFO - Observation: You move the common toad to the yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close yellow box
+INFO - Observation: The yellow box is not closeable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: task
+INFO - Observation: Task description:
+Your task is to find a(n) animal. First, focus on the thing. Then, move it to the yellow box in the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in yellow box
+INFO - Observation: Inside the yellow box is: 
+	a tadpole
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take tadpole out of yellow box
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing a tadpole)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take tadpole out of yellow box' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'take tadpole out of yellow box'.
+WARNING - Handling failure based on observation content for standard action 'take tadpole out of yellow box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put tadpole in inventory
+INFO - Observation: You move the common toad to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to yellow box
+INFO - Observation: Its not clear how to go to/through a yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put tadpole in yellow box
+INFO - Observation: You move the common toad to the yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close yellow box
+INFO - Observation: The yellow box is not closeable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: task
+INFO - Observation: Task description:
+Your task is to find a(n) animal. First, focus on the thing. Then, move it to the yellow box in the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in yellow box
+INFO - Observation: Inside the yellow box is: 
+	a tadpole
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take tadpole out of yellow box
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing a tadpole)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take tadpole out of yellow box' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'take tadpole out of yellow box'.
+WARNING - Handling failure based on observation content for standard action 'take tadpole out of yellow box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put tadpole in inventory
+INFO - Observation: You move the common toad to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to yellow box
+INFO - Observation: Its not clear how to go to/through a yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put tadpole in yellow box
+INFO - Observation: You move the common toad to the yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close yellow box
+INFO - Observation: The yellow box is not closeable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: task
+INFO - Observation: Task description:
+Your task is to find a(n) animal. First, focus on the thing. Then, move it to the yellow box in the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in yellow box
+INFO - Observation: Inside the yellow box is: 
+	a tadpole
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take tadpole out of yellow box
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing a tadpole)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take tadpole out of yellow box' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'take tadpole out of yellow box'.
+WARNING - Handling failure based on observation content for standard action 'take tadpole out of yellow box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put tadpole in inventory
+INFO - Observation: You move the common toad to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to yellow box
+INFO - Observation: Its not clear how to go to/through a yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put tadpole in yellow box
+INFO - Observation: You move the common toad to the yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close yellow box
+INFO - Observation: The yellow box is not closeable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: task
+INFO - Observation: Task description:
+Your task is to find a(n) animal. First, focus on the thing. Then, move it to the yellow box in the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in yellow box
+INFO - Observation: Inside the yellow box is: 
+	a adult frog
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take adult frog out of yellow box
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing a adult frog)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take adult frog out of yellow box' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'take adult frog out of yellow box'.
+WARNING - Handling failure based on observation content for standard action 'take adult frog out of yellow box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put adult frog in inventory
+INFO - Observation: You move the common toad to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to yellow box
+INFO - Observation: Its not clear how to go to/through a yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put adult frog in yellow box
+INFO - Observation: You move the common toad to the yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close yellow box
+INFO - Observation: The yellow box is not closeable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: task
+INFO - Observation: Task description:
+Your task is to find a(n) animal. First, focus on the thing. Then, move it to the yellow box in the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in yellow box
+INFO - Observation: Inside the yellow box is: 
+	a adult frog
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take adult frog out of yellow box
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing a adult frog)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take adult frog out of yellow box' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'take adult frog out of yellow box'.
+WARNING - Handling failure based on observation content for standard action 'take adult frog out of yellow box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put adult frog in inventory
+INFO - Observation: You move the common toad to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to yellow box
+INFO - Observation: Its not clear how to go to/through a yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put adult frog in yellow box
+INFO - Observation: You move the common toad to the yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close yellow box
+INFO - Observation: The yellow box is not closeable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: task
+INFO - Observation: Task description:
+Your task is to find a(n) animal. First, focus on the thing. Then, move it to the yellow box in the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in yellow box
+INFO - Observation: Inside the yellow box is: 
+	a adult frog
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take adult frog out of yellow box
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing a adult frog)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take adult frog out of yellow box' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'take adult frog out of yellow box'.
+WARNING - Handling failure based on observation content for standard action 'take adult frog out of yellow box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put adult frog in inventory
+INFO - Observation: You move the common toad to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to yellow box
+INFO - Observation: Its not clear how to go to/through a yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put adult frog in yellow box
+INFO - Observation: You move the common toad to the yellow box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close yellow box
+INFO - Observation: The yellow box is not closeable.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: task
+INFO - Observation: Task description:
+Your task is to find a(n) animal. First, focus on the thing. Then, move it to the yellow box in the living room.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in yellow box
+INFO - Observation: Inside the yellow box is: 
+	a adult frog
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take adult frog out of yellow box
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a red apple
+	a book shelf (containing nothing)
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a desk. On the desk is: a drawer.
+	a picture
+	a yellow box (containing a adult frog)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take adult frog out of yellow box' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'take adult frog out of yellow box'.
+WARNING - Handling failure based on observation content for standard action 'take adult frog out of yellow box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put adult frog in inventory
+INFO - Observation: You move the common toad to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------

@@ -1,0 +1,157 @@
+INFO - ========== Task Name: chemistry-mix-paint-secondary-color | Task ID: 3-31 ==========
+INFO - Task: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a drawing
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a drawing
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to art studio
+INFO - Observation: You move to the art studio.
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is closed. 
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing nothing).
+	a wood cup (containing yellow paint)
+	a wood cup (containing red paint)
+	a wood cup (containing blue paint)
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open large cupboard
+INFO - Observation: The large cupboard is now open.
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in large cupboard
+INFO - Observation: Inside the large cupboard is: 
+	a drawer
+	a wood cup (containing blue paint)
+	a wood cup (containing yellow paint)
+	a wood cup (containing red paint)
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up wood cup containing blue paint
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	pick up wood cup (in art studio)
+1:	pick up wood cup (in large cupboard, in art studio)
+
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You move the wood cup to the inventory.
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up wood cup containing red paint
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	pick up wood cup (in art studio)
+1:	pick up wood cup (in large cupboard, in art studio)
+
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 1
+INFO - Observation: You move the wood cup to the inventory.
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing red paint into glass cup on table
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	pour wood cup (in art studio) in glass cup (in table, in art studio)
+1:	pour wood cup (in inventory, in agent, in art studio) in glass cup (in table, in art studio)
+
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You pour the contents of the wood cup into the glass cup.
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up wood cup containing blue paint
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	pick up wood cup (in inventory, in agent, in art studio)
+1:	pick up wood cup (in large cupboard, in art studio)
+
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You move the wood cup to the inventory.
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour wood cup containing blue paint into glass cup on table
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	pour wood cup (in inventory, in agent, in art studio) in glass cup (in table, in art studio)
+1:	pour wood cup (in large cupboard, in art studio) in glass cup (in table, in art studio)
+
+INFO - Score: 30
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You pour the contents of the wood cup into the glass cup.
+INFO - Score: 40
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on glass cup
+INFO - Observation: This room is called the art studio. In it, you see: 
+	the agent
+	a substance called air
+	a large cupboard. The large cupboard door is open. In the large cupboard is: a drawer, a wood cup (containing blue paint), a wood cup (containing yellow paint).
+	a paint closet. The paint closet door is closed. 
+	a table. On the table is: a glass cup (containing blue paint, red paint).
+	a wood cup (containing yellow paint)
+	a wood cup (containing nothing)
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on glass cup' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'violet paint'.
+Using 'focus on glass cup' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 40
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'glass cup'. Task requires focus on items related to: 'violet paint'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix glass cup
+INFO - Observation: Red and blue paint mix to produce violet paint.
+INFO - Score: 50
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on violet paint
+INFO - Observation: You focus on the violet paint.
+INFO - Score: 100
+INFO - Done: True
+INFO - ---------------------------------

@@ -1,0 +1,2759 @@
+INFO - ========== Task Name: chemistry-mix | Task ID: 2-24 ==========
+INFO - Task: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is open, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a substance called sugar
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: read instructions to make sugar water
+INFO - Observation: The recipe reads:
+To make sugar water, you need to mix sugar, water.
+INFO - Score: 33
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up sugar
+INFO - Observation: You move the sugar to the inventory.
+INFO - Score: 33
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bathroom
+INFO - Observation: You move to the bathroom.
+INFO - Score: 33
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up water from toilet
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'pick up water from toilet' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up water from toilet' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up toilet'. You might then be able to access its contents.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up water from toilet'.
+WARNING - Handling failure based on observation content for standard action 'pick up water from toilet'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up water from toilet'. Suggesting 'pick up toilet'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up toilet
+INFO - Observation: The toilet is not moveable.
+INFO - Score: 33
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in toilet
+INFO - Observation: Inside the toilet is: 
+	a substance called water
+
+ You also see: A drain, which is closed.
+INFO - Score: 33
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up water from toilet
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'pick up water from toilet' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up water from toilet' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up toilet'. You might then be able to access its contents.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up water from toilet'.
+WARNING - Handling failure based on observation content for standard action 'pick up water from toilet'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up water from toilet'. Suggesting 'pick up toilet'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up water
+INFO - Observation: You can't pick up a liquid directly. Try pouring it from one container to another, or dunking empty containers into containers filled with the liquid.
+INFO - Score: 33
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: dunk glass cup into toilet
+INFO - Observation: You dunk the glass cup in the toilet, moving the liquids (water) to the glass cup.
+INFO - Score: 33
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move glass cup to kitchen
+INFO - Observation: You move the glass cup to the kitchen.
+INFO - Score: 33
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour water from glass cup into table
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed.
+You also see:
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'pour water from glass cup into table' did not succeed as expected in the bathroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour water from glass cup into table'.
+WARNING - Handling failure based on observation content for standard action 'pour water from glass cup into table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 33
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour water from glass cup into table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pour water from glass cup into table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour water from glass cup into table'.
+WARNING - Handling failure based on observation content for standard action 'pour water from glass cup into table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move sugar from inventory to table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'move sugar from inventory to table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move sugar from inventory to table'.
+WARNING - Handling failure based on observation content for standard action 'move sugar from inventory to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down sugar on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'put down sugar on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down sugar on table'.
+WARNING - Handling failure based on observation content for standard action 'put down sugar on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar from table with water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar from table with water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar from table with water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar from table with water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar on table with water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar on table with water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar on table with water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar on table with water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar from table with water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar from table with water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar from table with water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar from table with water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar from inventory with water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar from inventory with water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar from inventory with water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar from inventory with water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar on table with water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar on table with water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar on table with water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar on table with water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar from inventory with water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar from inventory with water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar from inventory with water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar from inventory with water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put sugar into glass cup with water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'put sugar into glass cup with water' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put sugar into glass cup with water'.
+WARNING - Handling failure based on observation content for standard action 'put sugar into glass cup with water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put sugar into glass cup with water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'put sugar into glass cup with water' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put sugar into glass cup with water'.
+WARNING - Handling failure based on observation content for standard action 'put sugar into glass cup with water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put sugar into glass cup with water on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'put sugar into glass cup with water on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put sugar into glass cup with water on table'.
+WARNING - Handling failure based on observation content for standard action 'put sugar into glass cup with water on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put sugar into glass cup with water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'put sugar into glass cup with water' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put sugar into glass cup with water'.
+WARNING - Handling failure based on observation content for standard action 'put sugar into glass cup with water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 33
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put sugar into glass cup
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	move sugar (in inventory, in agent, in kitchen) to glass cup (in kitchen)
+1:	move sugar (in inventory, in agent, in kitchen) to glass cup (in table, in kitchen)
+
+INFO - Score: 33
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You move the sugar to the glass cup.
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at glass cup
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	look at glass cup (in kitchen)
+1:	look at glass cup (in table, in kitchen)
+
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: a glass cup (containing a substance called sugar, a substance called water)
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup on table' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup on table' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup on table'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at glass cup
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	look at glass cup (in kitchen)
+1:	look at glass cup (in table, in kitchen)
+
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: a glass cup (containing a substance called sugar, a substance called water)
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup on table' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup on table' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup on table'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at glass cup
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	look at glass cup (in kitchen)
+1:	look at glass cup (in table, in kitchen)
+
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: a glass cup (containing a substance called sugar, a substance called water)
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup on table' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup on table' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup on table'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at glass cup
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	look at glass cup (in kitchen)
+1:	look at glass cup (in table, in kitchen)
+
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: a glass cup (containing a substance called sugar, a substance called water)
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup on table' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup on table' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup on table'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at glass cup
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	look at glass cup (in kitchen)
+1:	look at glass cup (in table, in kitchen)
+
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: a glass cup (containing a substance called sugar, a substance called water)
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup on table' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup on table' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup on table'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at glass cup
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	look at glass cup (in kitchen)
+1:	look at glass cup (in table, in kitchen)
+
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: a glass cup (containing a substance called sugar, a substance called water)
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup on table' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup on table' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup on table'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at glass cup
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	look at glass cup (in kitchen)
+1:	look at glass cup (in table, in kitchen)
+
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: a glass cup (containing a substance called sugar, a substance called water)
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup on table' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup on table' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup on table'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: mix sugar and water in glass cup on table
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'mix sugar and water in glass cup on table' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'mix sugar and water in glass cup on table'.
+WARNING - Handling failure based on observation content for standard action 'mix sugar and water in glass cup on table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water in glass cup
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water in glass cup' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water in glass cup' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water in glass cup'.
+WARNING - Handling focus failure based on observation content for target 'sugar water in glass cup'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on sugar water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass cup (containing a substance called sugar, a substance called water)
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	A recipe titled instructions to make sugar water
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on sugar water' did not succeed (Observation: "No known action matches that input.").
+Possible Reasons:
+- The object 'sugar water' might not exist yet, might not be ready (e.g., needs planting, mixing), or you might need to use its exact name. Check the task steps and ensure all prerequisites are met. Ensure you are using the correct name, perhaps ''sugar water'' if that is the expected item.
+Suggestion: Please check the environment state, your location, ensure the object is ready, and verify you are using the correct name and syntax.
+INFO - Score: 42
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential error phrase 'no known action' in observation string for focus action 'focus on sugar water'.
+WARNING - Handling focus failure based on observation content for target 'sugar water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look at glass cup
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	look at glass cup (in kitchen)
+1:	look at glass cup (in table, in kitchen)
+
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: a glass cup (containing a substance called sugar, a substance called water)
+INFO - Score: 42
+INFO - Done: False
+INFO - ---------------------------------

@@ -1,0 +1,115 @@
+INFO - ========== Task Name: find-animal | Task ID: 5-229 ==========
+INFO - Task: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 1 (containing a apple tree in the adult stage, soil)
+	a flower pot 2 (containing nothing)
+	a flower pot 4 (containing nothing)
+	a flower pot 5 (containing a peach tree in the adult stage, soil)
+	a flower pot 9 (containing a banana tree in the adult stage, soil)
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Agent Output: THOUGHT: The bee hive might contain an animal, so I should check it out.
+ACTION: open bee hive door
+INFO - Agent Action: open bee hive door
+INFO - Observation: No known action matches that input.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The bee hive door is closed, I need to open it first.
+ACTION: open bee hive door
+INFO - Agent Action: open bee hive door
+INFO - Observation: No known action matches that input.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The action to open the bee hive door was not recognized, I will try again.
+ACTION: open bee hive
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is now open.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Now that the bee hive is open, I should look inside to find the animal.
+ACTION: look at bee hive
+INFO - Agent Action: look at bee hive
+INFO - Observation: a bee hive. The bee hive door is open. In the bee hive is: 
+	a adult bee
+	a adult bee
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I found an adult bee in the bee hive, now I need to focus on it.
+ACTION: focus on adult bee
+INFO - Agent Action: focus on adult bee
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on adult bee (in greenhouse)
+1:	focus on adult bee (in greenhouse)
+2:	focus on adult bee (in greenhouse)
+
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The environment is asking for a specific action number, I will choose the first option.
+ACTION: 0
+INFO - Agent Action: 0
+INFO - Observation: You focus on the adult bee.
+INFO - Score: 58
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Now that I have focused on the adult bee, I need to pick it up and move it to the green box in the bedroom.
+ACTION: pick up adult bee
+INFO - Agent Action: pick up adult bee
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	pick up adult bee (in greenhouse)
+1:	pick up adult bee (in greenhouse)
+
+INFO - Score: 58
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: ACTION: 0
+INFO - Agent Action: 0
+INFO - Observation: You move the bee 0 to the inventory.
+INFO - Score: 58
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Now that I have picked up the adult bee, I need to go to the bedroom and move it to the green box.
+ACTION: go to bedroom
+INFO - Agent Action: go to bedroom
+INFO - Observation: No known action matches that input.
+INFO - Score: 58
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The action to go to the bedroom was not recognized, I should use the specific door to the bedroom.
+ACTION: go to bedroom door
+INFO - Agent Action: go to bedroom door
+INFO - Observation: No known action matches that input.
+INFO - Score: 58
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The action to go to the bedroom was not recognized, I should use the door to the hallway first and then find the correct path to the bedroom.
+ACTION: go to hallway door
+INFO - Agent Action: go to hallway door
+INFO - Observation: You move through the door to the hallway.
+INFO - Score: 67
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Now I am in the hallway, I need to find the correct path to the bedroom.
+ACTION: go to bedroom door
+INFO - Agent Action: go to bedroom door
+INFO - Observation: You move through the door to the bedroom.
+INFO - Score: 75
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I am now in the bedroom, I need to move the adult bee to the green box.
+ACTION: move adult bee to green box
+INFO - Agent Action: move adult bee to green box
+INFO - Observation: You move the bee 1 to the green box.
+INFO - Score: 100
+INFO - Done: True
+INFO - ---------------------------------

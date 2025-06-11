@@ -1,0 +1,1604 @@
+INFO - ========== Task Name: find-non-living-thing | Task ID: 7-229 ==========
+INFO - Task: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 1 (containing nothing)
+	a flower pot 3 (containing a banana tree in the adult stage, soil)
+	a flower pot 4 (containing a peach tree in the adult stage, soil)
+	a flower pot 6 (containing a apple tree in the adult stage, soil)
+	a flower pot 8 (containing nothing)
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Agent Output: THOUGHT: The non-living thing in the greenhouse is the air, but I need to focus on a specific object. I will start by looking at the bee hive.
+ACTION: look at bee hive
+INFO - Agent Action: look at bee hive
+INFO - Observation: a bee hive. The bee hive door is closed.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The bee hive is a living thing, so I need to look at other objects in the greenhouse.
+ACTION: look in flower pot 3
+INFO - Agent Action: look in flower pot 3
+INFO - Observation: Inside the flower pot 3 is: 
+	a banana tree in the adult stage
+	soil
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The flower pot 3 contains a living banana tree, so I need to look at other objects.
+ACTION: look in flower pot 4
+INFO - Agent Action: look in flower pot 4
+INFO - Observation: Inside the flower pot 4 is: 
+	a peach tree in the adult stage
+	soil
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The flower pot 4 contains a living peach tree, so I need to look at other objects.
+ACTION: look in flower pot 6
+INFO - Agent Action: look in flower pot 6
+INFO - Observation: Inside the flower pot 6 is: 
+	a apple tree in the adult stage
+	soil
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The flower pot 6 contains a living apple tree, so I need to look at other objects.
+ACTION: look in jug
+INFO - Agent Action: look in jug
+INFO - Observation: Inside the jug is: 
+	nothing
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The jug is empty, so I will focus on it as the non-living thing.
+ACTION: focus on jug
+INFO - Agent Action: focus on jug
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 1 (containing a substance called water)
+	a flower pot 3 (containing a banana tree in the reproducing stage, soil)
+	a flower pot 4 (containing a peach tree in the reproducing stage, soil)
+	a flower pot 6 (containing a apple tree in the reproducing stage, soil)
+	a flower pot 8 (containing a substance called water)
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on jug' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on jug' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 8
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'jug'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Since the jug is empty and I cannot use 'focus on jug', I will pick it up and then put it down in the correct location later.
+ACTION: pick up jug
+INFO - Agent Action: pick up jug
+INFO - Observation: You move the jug to the inventory.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Now that I have picked up the jug, I need to go to the bedroom to find the green box.
+ACTION: go to bedroom
+INFO - Agent Action: go to bedroom
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 1 (containing a substance called water)
+	a flower pot 3 (containing a banana tree in the reproducing stage, soil)
+	a flower pot 4 (containing a peach tree in the reproducing stage, soil)
+	a flower pot 6 (containing a apple tree in the reproducing stage, soil)
+	a flower pot 8 (containing a substance called water)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to bedroom' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bedroom' from your current location (the greenhouse). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 8
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bedroom'.
+WARNING - Handling failure based on observation content for standard action 'go to bedroom'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bedroom' action, likely due to non-adjacency from the greenhouse.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the greenhouse.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 1 (containing a substance called water)
+	a flower pot 3 (containing a banana tree in the reproducing stage, soil)
+	a flower pot 4 (containing a peach tree in the reproducing stage, soil)
+	a flower pot 6 (containing a apple tree in the reproducing stage, soil)
+	a flower pot 8 (containing a substance called water)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The only exit from the greenhouse is to the hallway. I will go there next.
+ACTION: go to hallway
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Now that I am in the hallway, I need to find the bedroom and then locate the green box.
+ACTION: go to bedroom
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I am now in the bedroom, I need to find the green box and put the jug inside.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to focus on the green box and then put the jug inside it.
+ACTION: focus on green box
+INFO - Agent Action: focus on green box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on green box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on green box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'green box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Since I cannot use 'focus on green box', I will put the jug down in the green box.
+ACTION: put down jug in green box
+INFO - Agent Action: put down jug in green box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down jug in green box' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down jug in green box'.
+WARNING - Handling failure based on observation content for standard action 'put down jug in green box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to put the jug down in the green box correctly.
+ACTION: put down jug in green box
+INFO - Agent Action: put down jug in green box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down jug in green box' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down jug in green box'.
+WARNING - Handling failure based on observation content for standard action 'put down jug in green box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to ensure I have the jug in my inventory before putting it down in the green box.
+ACTION: inventory
+INFO - Agent Action: inventory
+INFO - Observation: In your inventory, you see:
+	a jug (containing nothing)
+	an orange
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I have the jug in my inventory, I will now put it down in the green box.
+ACTION: put down jug in green box
+INFO - Agent Action: put down jug in green box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down jug in green box' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down jug in green box'.
+WARNING - Handling failure based on observation content for standard action 'put down jug in green box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to ensure the green box is accessible and I am in the correct location.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to move to the location where the green box is placed.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The only exit from the bedroom is to the hallway. I need to go there and then to the bookshelf.
+ACTION: go to hallway
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Now that I am in the hallway, I need to go back to the bedroom and then to the bookshelf.
+ACTION: go to bedroom
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I am now in the bedroom, I need to go to the bookshelf and put the jug in the green box.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the available exits from the bedroom.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the available exits from the bedroom.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the available exits from the bedroom.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to bookshelf
+INFO - Agent Action: go to bookshelf
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to bookshelf' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'bookshelf' from your current location (the bedroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to bookshelf'.
+WARNING - Handling failure based on observation content for standard action 'go to bookshelf'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to bookshelf' action, likely due to non-adjacency from the bedroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to check the available exits from the bedroom again.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The green box is on the bookshelf in the bedroom.
+ACTION: go to green box
+INFO - Agent Action: go to green box
+INFO - Observation: Its not clear how to go to/through a green box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to recheck the location of the green box.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a book shelf (containing A book (Moby Dick) titled Moby Dick by Herman Melville, A book (Pride and Prejudice) titled Pride and Prejudice by Jane Austen, A book (Sherlock Holmes) titled Sherlock Holmes by Arthur Conan Doyle)
+	a closet. The closet door is closed. 
+	a green box (containing nothing)
+	a painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------

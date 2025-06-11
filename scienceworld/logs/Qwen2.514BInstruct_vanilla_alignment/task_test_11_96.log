@@ -1,0 +1,1426 @@
+INFO - ========== Task Name: grow-plant | Task ID: 11-96 ==========
+INFO - Task: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a table. On the table is: a battery, a black wire, a orange light bulb, which is off, a orange wire, a red wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+You also see:
+	A door to the hallway (that is open)
+INFO - Agent Action: go to living room
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a table. On the table is: a battery, a black wire, a orange light bulb, which is off, a orange wire, a red wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to living room' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'living room' from your current location (the workshop). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to living room'.
+WARNING - Handling failure based on observation content for standard action 'go to living room'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to living room' action, likely due to non-adjacency from the workshop.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a table. On the table is: a battery, a black wire, a orange light bulb, which is off, a orange wire, a red wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 1
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: You move to the living room.
+INFO - Score: 2
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a seed jar (containing a orange seed, a orange seed, a orange seed, a orange seed, a orange seed)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 2
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in living room)
+1:	focus on orange seed (in seed jar, in living room)
+2:	focus on orange seed (in seed jar, in living room)
+3:	focus on orange seed (in seed jar, in living room)
+4:	focus on orange seed (in seed jar, in living room)
+
+INFO - Score: 2
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 27
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a seed jar (containing a orange seed, a orange seed, a orange seed, a orange seed, a orange seed)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 27
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+
+Your task is to grow a orange plant from seed. Seeds can be found in the living room. First, focus on a seed. Then, make changes to the environment that grow the plant until it reaches the reproduction life stage.
+
+Now you need to give your next action.
+профессионал
+move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'open seed jar
+
+Your task is to grow a orange plant from seed. Seeds can be found in the living room. First, focus on a seed. Then, make changes to the environment that grow the plant until it reaches the reproduction life stage.
+
+Now you need to give your next action.
+профессионал
+move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'open seed jar
+
+Your task is to grow a orange plant from seed. Seeds can be found in the living room. First, focus on a seed. Then, make changes to the environment that grow the plant until it reaches the reproduction life stage.
+
+Now you need to give your next action.
+профессионал
+move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'open seed jar
+
+Your task is to grow a orange plant from seed. Seeds can be found in the living room. First, focus on a seed. Then, make changes to the environment that grow the plant until it reaches the reproduction life stage.
+
+Now you need to give your next action.
+профессионал
+move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+1:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+2:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+3:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+4:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+1:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+2:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+3:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+4:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+1:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+2:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+3:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+4:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+1:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+2:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+3:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+4:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+1:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+2:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+3:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+4:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+1:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+2:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+3:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+4:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+1:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+2:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+3:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+4:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+1:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+2:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+3:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+4:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+1:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+2:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+3:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+4:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on orange seed in seed jar
+INFO - Observation: Ambiguous request: Please enter the number for the action you intended (or blank to cancel):
+0:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+1:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+2:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+3:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+4:	focus on orange seed (in seed jar, in inventory, in agent, in living room)
+
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: 0
+INFO - Observation: You focus on the orange seed.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: pour orange seed from seed jar onto table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pour orange seed from seed jar onto table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pour orange seed from seed jar onto table'.
+WARNING - Handling failure based on observation content for standard action 'pour orange seed from seed jar onto table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open seed jar
+INFO - Observation: The seed jar is not openable.
+INFO - Score: 29
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: move orange seed from seed jar to table
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move orange seed from seed jar to table' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 29
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move orange seed from seed jar to table'.
+WARNING - Handling failure based on observation content for standard action 'move orange seed from seed jar to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------

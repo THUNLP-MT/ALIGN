@@ -1,0 +1,1599 @@
+INFO - ========== Task Name: change-the-state-of-matter-of | Task ID: 1-25 ==========
+INFO - Task: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Agent Action: focus on mercury
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on mercury' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on mercury' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'mercury'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at bee hive
+INFO - Observation: a bee hive. The bee hive door is closed.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive door
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'open bee hive door' failed (Observation: "No known action matches that input.").
+Reason: The syntax might be incorrect. To open objects like 'bee hive', try using the command 'open bee hive' instead of specifying 'door'.
+Suggestion: Please check the object name and try the suggested syntax.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'open bee hive door'.
+WARNING - Handling failure based on observation content for standard action 'open bee hive door'. Failure phrase: 'no known action'.
+INFO - Detected failed 'open ... door' syntax for 'open bee hive door'. Suggesting 'open bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is now open.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on mercury
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: a adult bee, a adult bee, a adult bee.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on mercury' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'substance'.
+Using 'focus on mercury' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'mercury'. Task requires focus on items related to: 'substance'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look in bee hive
+INFO - Observation: Inside the bee hive is: 
+	a adult bee
+	a adult bee
+	a adult bee
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: a adult bee.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: a adult bee.
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is already open.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is already open.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is already open.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take mercury from bee hive' uses invalid syntax.
+Reason: The action 'take mercury from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move mercury to inventory'.
+Your action was not executed.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take mercury from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up mercury from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up mercury from bee hive' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up mercury from bee hive' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bee hive'. You might then be able to access its contents.
+INFO - Score: 0
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up mercury from bee hive'.
+WARNING - Handling failure based on observation content for standard action 'pick up mercury from bee hive'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up mercury from bee hive'. Suggesting 'pick up bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------

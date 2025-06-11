@@ -1,0 +1,1327 @@
+INFO - ========== Task Name: chemistry-mix-paint-secondary-color | Task ID: 3-28 ==========
+INFO - Task: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a fire pit (containing nothing)
+	a fountain (containing nothing)
+	the ground
+	a shovel
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a fire pit (containing nothing)
+	a fountain (containing nothing)
+	the ground
+	a shovel
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+INFO - Score: 0
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to foundry
+INFO - Observation: You move to the foundry.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is closed. 
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on blast furnace
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is closed. 
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on blast furnace' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'violet paint'.
+Using 'focus on blast furnace' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'blast furnace'. Task requires focus on items related to: 'violet paint'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to table
+INFO - Observation: Its not clear how to go to/through a table.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at table
+INFO - Observation: a table. On the table is: 
+	nothing
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to sink
+INFO - Observation: Its not clear how to go to/through a sink.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at sink
+INFO - Observation: a sink, which is turned off. In the sink is: nothing. The drain is open.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: check blast furnace door
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is closed. 
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'check blast furnace door' did not succeed as expected in the foundry (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'check blast furnace door'.
+WARNING - Handling failure based on observation content for standard action 'check blast furnace door'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open blast furnace door
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is closed. 
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'open blast furnace door' failed (Observation: "No known action matches that input.").
+Reason: The syntax might be incorrect. To open objects like 'blast furnace', try using the command 'open blast furnace' instead of specifying 'door'.
+Suggestion: Please check the object name and try the suggested syntax.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'open blast furnace door'.
+WARNING - Handling failure based on observation content for standard action 'open blast furnace door'. Failure phrase: 'no known action'.
+INFO - Detected failed 'open ... door' syntax for 'open blast furnace door'. Suggesting 'open blast furnace'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open blast furnace
+INFO - Observation: The blast furnace is now open.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: inspect blast furnace
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is open. In the blast furnace is: nothing.
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'inspect blast furnace' did not succeed as expected in the foundry (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'inspect blast furnace'.
+WARNING - Handling failure based on observation content for standard action 'inspect blast furnace'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look in blast furnace
+INFO - Observation: Inside the blast furnace is: 
+	nothing
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a fire pit (containing nothing)
+	a fountain (containing a substance called water)
+	the ground
+	a shovel
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: You move to the greenhouse.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive door
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'open bee hive door' failed (Observation: "No known action matches that input.").
+Reason: The syntax might be incorrect. To open objects like 'bee hive', try using the command 'open bee hive' instead of specifying 'door'.
+Suggestion: Please check the object name and try the suggested syntax.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'open bee hive door'.
+WARNING - Handling failure based on observation content for standard action 'open bee hive door'. Failure phrase: 'no known action'.
+INFO - Detected failed 'open ... door' syntax for 'open bee hive door'. Suggesting 'open bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is now open.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: inspect bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: a adult bee, a adult bee, a adult bee, a adult bee.
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'inspect bee hive' did not succeed as expected in the greenhouse (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'inspect bee hive'.
+WARNING - Handling failure based on observation content for standard action 'inspect bee hive'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look in bee hive
+INFO - Observation: Inside the bee hive is: 
+	a adult bee
+	a adult bee
+	a adult bee
+	a adult bee
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close bee hive
+INFO - Observation: The bee hive is now closed.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This outside location is called the outside. Here you see: 
+	the agent
+	a substance called air
+	an axe
+	a adult bee
+	a adult bee
+	a fire pit (containing nothing)
+	a fountain (containing a substance called water)
+	the ground
+	a shovel
+	a substance called wood
+You also see:
+	A door to the foundry (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open cupboard
+INFO - Observation: The cupboard is now open.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: inspect cupboard
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is open. In the cupboard is: a ceramic cup (containing nothing), a drawer, a metal pot (containing nothing), a tin cup (containing nothing).
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'inspect cupboard' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'inspect cupboard'.
+WARNING - Handling failure based on observation content for standard action 'inspect cupboard'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look in cupboard
+INFO - Observation: Inside the cupboard is: 
+	a ceramic cup (containing nothing)
+	a drawer
+	a metal pot (containing nothing)
+	a tin cup (containing nothing)
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close cupboard
+INFO - Observation: The cupboard is now closed.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to counter
+INFO - Observation: Its not clear how to go to/through a counter.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at counter
+INFO - Observation: a counter. On the counter is: 
+	a bowl (containing a red apple, a banana, an orange, a potato)
+	a drawer
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open drawer
+INFO - Observation: The drawer is now open.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: inspect drawer
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a adult bee
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'inspect drawer' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'inspect drawer'.
+WARNING - Handling failure based on observation content for standard action 'inspect drawer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look in drawer
+INFO - Observation: Inside the drawer is: 
+	nothing
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close drawer
+INFO - Observation: The drawer is now closed.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in bowl
+INFO - Observation: Inside the bowl is: 
+	a red apple
+	a banana
+	an orange
+	a potato
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take apple from bowl
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take apple from bowl' uses invalid syntax.
+Reason: The action 'take apple from bowl' is not supported in this environment.
+To get items from containers like 'bowl', you usually need to 'pick up bowl' first, or check if you can 'move apple to inventory'.
+Your action was not executed.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take apple from bowl'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up apple from bowl
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'pick up apple from bowl' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up apple from bowl' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up bowl'. You might then be able to access its contents.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up apple from bowl'.
+WARNING - Handling failure based on observation content for standard action 'pick up apple from bowl'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up apple from bowl'. Suggesting 'pick up bowl'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bowl
+INFO - Observation: You move the bowl to the inventory.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take apple from bowl
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take apple from bowl' uses invalid syntax.
+Reason: The action 'take apple from bowl' is not supported in this environment.
+To get items from containers like 'bowl', you usually need to 'pick up bowl' first, or check if you can 'move apple to inventory'.
+Your action was not executed.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take apple from bowl'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: take apple from inventory
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take apple from inventory' uses invalid syntax.
+Reason: The action 'take apple from inventory' is not supported in this environment.
+To get items from containers like 'inventory', you usually need to 'pick up inventory' first, or check if you can 'move apple to inventory'.
+Your action was not executed.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take apple from inventory'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: eat apple
+INFO - Observation: The apple was delicious.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to sink
+INFO - Observation: Its not clear how to go to/through a sink.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look at sink
+INFO - Observation: a sink, which is turned off. In the sink is: nothing. The drain is open.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: fill sink with water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'fill sink with water' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'fill sink with water'.
+WARNING - Handling failure based on observation content for standard action 'fill sink with water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use tap to fill sink with water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use tap to fill sink with water' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use tap to fill sink with water'.
+WARNING - Handling failure based on observation content for standard action 'use tap to fill sink with water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to faucet
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to faucet' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'faucet' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to faucet'.
+WARNING - Handling failure based on observation content for standard action 'go to faucet'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to faucet' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to bathroom
+INFO - Observation: You move to the bathroom.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: flush toilet
+INFO - Observation: The toilet is now flushing.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: use tap to fill sink with water
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use tap to fill sink with water' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use tap to fill sink with water'.
+WARNING - Handling failure based on observation content for standard action 'use tap to fill sink with water'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: use tap to fill sink with water from faucet
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'use tap to fill sink with water from faucet' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'use tap to fill sink with water from faucet'.
+WARNING - Handling failure based on observation content for standard action 'use tap to fill sink with water from faucet'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: fill sink with water from faucet
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'fill sink with water from faucet' did not succeed as expected in the kitchen (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'fill sink with water from faucet'.
+WARNING - Handling failure based on observation content for standard action 'fill sink with water from faucet'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to faucet
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to faucet' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'faucet' from your current location (the kitchen). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to faucet'.
+WARNING - Handling failure based on observation content for standard action 'go to faucet'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to faucet' action, likely due to non-adjacency from the kitchen.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to foundry
+INFO - Observation: You move to the foundry.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in blast furnace
+INFO - Observation: Inside the blast furnace is: 
+	nothing
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a blast furnace, which is turned off. The blast furnace door is open. In the blast furnace is: nothing.
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to greenhouse' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'greenhouse' from your current location (the foundry). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to greenhouse'.
+WARNING - Handling failure based on observation content for standard action 'go to greenhouse'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to greenhouse' action, likely due to non-adjacency from the foundry.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: You move to the greenhouse.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in bee hive
+INFO - Observation: The bee hive isn't open, so you can't see inside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive door
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'open bee hive door' failed (Observation: "No known action matches that input.").
+Reason: The syntax might be incorrect. To open objects like 'bee hive', try using the command 'open bee hive' instead of specifying 'door'.
+Suggestion: Please check the object name and try the suggested syntax.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'open bee hive door'.
+WARNING - Handling failure based on observation content for standard action 'open bee hive door'. Failure phrase: 'no known action'.
+INFO - Detected failed 'open ... door' syntax for 'open bee hive door'. Suggesting 'open bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is now open.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take bee from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is open. In the bee hive is: a adult bee, a adult bee.
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take bee from bee hive' uses invalid syntax.
+Reason: The action 'take bee from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move bee to inventory'.
+Your action was not executed.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take bee from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take bee from inventory
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take bee from inventory' uses invalid syntax.
+Reason: The action 'take bee from inventory' is not supported in this environment.
+To get items from containers like 'inventory', you usually need to 'pick up inventory' first, or check if you can 'move bee to inventory'.
+Your action was not executed.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take bee from inventory'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down bee hive
+INFO - Observation: You move the bee hive to the greenhouse.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close bee hive
+INFO - Observation: The bee hive is now closed.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to foundry
+INFO - Observation: You move to the foundry.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in blast furnace
+INFO - Observation: Inside the blast furnace is: 
+	nothing
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a blast furnace, which is turned off. The blast furnace door is open. In the blast furnace is: nothing.
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to greenhouse' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'greenhouse' from your current location (the foundry). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to greenhouse'.
+WARNING - Handling failure based on observation content for standard action 'go to greenhouse'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to greenhouse' action, likely due to non-adjacency from the foundry.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: You move to the greenhouse.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive door
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'open bee hive door' failed (Observation: "No known action matches that input.").
+Reason: The syntax might be incorrect. To open objects like 'bee hive', try using the command 'open bee hive' instead of specifying 'door'.
+Suggestion: Please check the object name and try the suggested syntax.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'open bee hive door'.
+WARNING - Handling failure based on observation content for standard action 'open bee hive door'. Failure phrase: 'no known action'.
+INFO - Detected failed 'open ... door' syntax for 'open bee hive door'. Suggesting 'open bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is now open.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take bee from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take bee from bee hive' uses invalid syntax.
+Reason: The action 'take bee from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move bee to inventory'.
+Your action was not executed.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take bee from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take bee from inventory
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take bee from inventory' uses invalid syntax.
+Reason: The action 'take bee from inventory' is not supported in this environment.
+To get items from containers like 'inventory', you usually need to 'pick up inventory' first, or check if you can 'move bee to inventory'.
+Your action was not executed.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take bee from inventory'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down bee hive
+INFO - Observation: You move the bee hive to the greenhouse.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close bee hive
+INFO - Observation: The bee hive is now closed.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to foundry
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to foundry' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'foundry' from your current location (the greenhouse). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to foundry'.
+WARNING - Handling failure based on observation content for standard action 'go to foundry'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to foundry' action, likely due to non-adjacency from the greenhouse.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to foundry
+INFO - Observation: You move to the foundry.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in blast furnace
+INFO - Observation: Inside the blast furnace is: 
+	nothing
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: This room is called the foundry. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a blast furnace, which is turned off. The blast furnace door is open. In the blast furnace is: nothing.
+	a sink, which is turned off. In the sink is: nothing.
+	a table. On the table is: nothing.
+You also see:
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to greenhouse' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'greenhouse' from your current location (the foundry). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to greenhouse'.
+WARNING - Handling failure based on observation content for standard action 'go to greenhouse'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to greenhouse' action, likely due to non-adjacency from the foundry.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: You move to the greenhouse.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive door
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'open bee hive door' failed (Observation: "No known action matches that input.").
+Reason: The syntax might be incorrect. To open objects like 'bee hive', try using the command 'open bee hive' instead of specifying 'door'.
+Suggestion: Please check the object name and try the suggested syntax.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'open bee hive door'.
+WARNING - Handling failure based on observation content for standard action 'open bee hive door'. Failure phrase: 'no known action'.
+INFO - Detected failed 'open ... door' syntax for 'open bee hive door'. Suggesting 'open bee hive'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: open bee hive
+INFO - Observation: The bee hive is now open.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take bee from bee hive
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is open. In the bee hive is: nothing.
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take bee from bee hive' uses invalid syntax.
+Reason: The action 'take bee from bee hive' is not supported in this environment.
+To get items from containers like 'bee hive', you usually need to 'pick up bee hive' first, or check if you can 'move bee to inventory'.
+Your action was not executed.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take bee from bee hive'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up bee hive
+INFO - Observation: You move the bee hive to the inventory.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take bee from inventory
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take bee from inventory' uses invalid syntax.
+Reason: The action 'take bee from inventory' is not supported in this environment.
+To get items from containers like 'inventory', you usually need to 'pick up inventory' first, or check if you can 'move bee to inventory'.
+Your action was not executed.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take bee from inventory'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put down bee hive
+INFO - Observation: You move the bee hive to the greenhouse.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: close bee hive
+INFO - Observation: The bee hive is now closed.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to foundry
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a adult bee
+	a bee hive. The bee hive door is closed. 
+	a jug (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'go to foundry' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'foundry' from your current location (the greenhouse). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 10
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to foundry'.
+WARNING - Handling failure based on observation content for standard action 'go to foundry'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to foundry' action, likely due to non-adjacency from the greenhouse.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to outside
+INFO - Observation: You move to the outside.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to foundry
+INFO - Observation: You move to the foundry.
+INFO - Score: 10
+INFO - Done: False
+INFO - ---------------------------------

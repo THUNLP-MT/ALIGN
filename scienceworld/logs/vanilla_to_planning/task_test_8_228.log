@@ -1,0 +1,1429 @@
+INFO - ========== Task Name: find-plant | Task ID: 8-228 ==========
+INFO - Task: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Agent Plan: Plan: First, I will look around the kitchen to confirm there is no plant present. Then, I will go to the bathroom and check for a plant. If no plant is found in the bathroom, I will go to the hallway and check there. If no plant is found in the hallway, I will go to the outside and check for a plant. If a plant is found, I will bring it to the red box in the bedroom.
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in counter
+INFO - Observation: Inside the counter is: 
+	a bowl (containing a red apple, a banana, an orange, a potato)
+	a drawer
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in drawer
+INFO - Observation: The drawer isn't open, so you can't see inside.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: open drawer
+INFO - Observation: The drawer is now open.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in drawer
+INFO - Observation: Inside the drawer is: 
+	nothing
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bathroom
+INFO - Observation: You move to the bathroom.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in toilet
+INFO - Observation: Inside the toilet is: 
+	a substance called water
+
+ You also see: A drain, which is closed.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+
+[Environment Feedback]: Your action 'go to hallway' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'hallway' from your current location (the bathroom). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to hallway'.
+WARNING - Handling failure based on observation content for standard action 'go to hallway'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to hallway' action, likely due to non-adjacency from the bathroom.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the bathroom. In it, you see: 
+	the agent
+	a substance called air
+	a bathtub, which is turned off. In the bathtub is: nothing.
+	a drawing
+	a glass cup (containing nothing)
+	a sink, which is turned off. In the sink is: nothing.
+	a toilet. In the toilet is: A drain, which is closed, a substance called water.
+You also see:
+	A door to the kitchen (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in counter
+INFO - Observation: Inside the counter is: 
+	a bowl (containing a red apple, a banana, an orange, a potato)
+	a drawer
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in drawer
+INFO - Observation: Inside the drawer is: 
+	nothing
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a painting
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to greenhouse
+INFO - Observation: You move to the greenhouse.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 3 (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. , soil)
+	a flower pot 4 (containing a apple tree in the reproducing stage. On the apple tree you see: a flower. , soil)
+	a flower pot 5 (containing a substance called water)
+	a flower pot 6 (containing a banana tree in the reproducing stage. On the banana tree you see: a flower. , soil)
+	a flower pot 9 (containing a substance called water)
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 3 (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. , soil)
+	a flower pot 4 (containing a apple tree in the reproducing stage. On the apple tree you see: a flower. , soil)
+	a flower pot 5 (containing a substance called water)
+	a flower pot 6 (containing a banana tree in the reproducing stage. On the banana tree you see: a flower. , soil)
+	a flower pot 9 (containing a substance called water)
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on flower pot 3
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 3 (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. , soil)
+	a flower pot 4 (containing a apple tree in the reproducing stage. On the apple tree you see: a flower. , soil)
+	a flower pot 5 (containing a substance called water)
+	a flower pot 6 (containing a banana tree in the reproducing stage. On the banana tree you see: a flower. , soil)
+	a flower pot 9 (containing a substance called water)
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on flower pot 3' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on flower pot 3' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'flower pot 3'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: take peach tree from flower pot 3
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 3 (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. , soil)
+	a flower pot 4 (containing a apple tree in the reproducing stage. On the apple tree you see: a flower. , soil)
+	a flower pot 5 (containing a substance called water)
+	a flower pot 6 (containing a banana tree in the reproducing stage. On the banana tree you see: a flower. , soil)
+	a flower pot 9 (containing a substance called water)
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'take peach tree from flower pot 3' uses invalid syntax.
+Reason: The action 'take peach tree from flower pot 3' is not supported in this environment.
+To get items from containers like 'flower pot 3', you usually need to 'pick up flower pot 3' first, or check if you can 'move peach tree to inventory'.
+Your action was not executed.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take peach tree from flower pot 3'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up flower pot 3
+INFO - Observation: You move the flower pot 3 to the inventory.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on flower pot 3
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 4 (containing a apple tree in the reproducing stage. On the apple tree you see: a flower. , soil)
+	a flower pot 5 (containing a substance called water)
+	a flower pot 6 (containing a banana tree in the reproducing stage. On the banana tree you see: a flower. , soil)
+	a flower pot 9 (containing a substance called water)
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on flower pot 3' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on flower pot 3' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'flower pot 3'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the greenhouse. In it, you see: 
+	the agent
+	a substance called air
+	a bee hive. The bee hive door is closed. 
+	a flower pot 4 (containing a apple tree in the reproducing stage. On the apple tree you see: a flower. , soil)
+	a flower pot 5 (containing a substance called water)
+	a flower pot 6 (containing a banana tree in the reproducing stage. On the banana tree you see: a flower. , soil)
+	a flower pot 9 (containing a substance called water)
+	a jug (containing nothing)
+	a shovel
+	a sink, which is turned off. In the sink is: nothing.
+You also see:
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 17
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 17
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to bedroom
+INFO - Observation: You move to the bedroom.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in red box
+INFO - Observation: Inside the red box is: 
+	nothing
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put down flower pot 3 in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'put down flower pot 3 in red box' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'put down flower pot 3 in red box'.
+WARNING - Handling failure based on observation content for standard action 'put down flower pot 3 in red box'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree in red box
+INFO - Observation: You move the peach tree to the red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move peach tree from red box to table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the reproducing stage. On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move peach tree from red box to table' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move peach tree from red box to table'.
+WARNING - Handling failure based on observation content for standard action 'move peach tree from red box to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree on table
+INFO - Observation: You move the peach tree to the table.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to red box
+INFO - Observation: Its not clear how to go to/through a red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take peach tree from table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: a peach tree in the reproducing stage (that looks unwell). On the peach tree you see: a flower. .
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take peach tree from table' uses invalid syntax.
+Reason: The action 'take peach tree from table' is not supported in this environment.
+To get items from containers like 'table', you usually need to 'pick up table' first, or check if you can 'move peach tree to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take peach tree from table'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up peach tree
+INFO - Observation: You move the peach tree to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree in red box
+INFO - Observation: You move the peach tree to the red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the dead stage (that looks unwell). On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the dead stage (that looks unwell). On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the dead stage (that looks unwell). On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the dead stage (that looks unwell). On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move peach tree from red box to table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a peach tree in the dead stage (that looks unwell). On the peach tree you see: a flower. )
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move peach tree from red box to table' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move peach tree from red box to table'.
+WARNING - Handling failure based on observation content for standard action 'move peach tree from red box to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree on table
+INFO - Observation: You move the peach tree to the table.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to red box
+INFO - Observation: Its not clear how to go to/through a red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take peach tree from table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: a dead peach tree, pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take peach tree from table' uses invalid syntax.
+Reason: The action 'take peach tree from table' is not supported in this environment.
+To get items from containers like 'table', you usually need to 'pick up table' first, or check if you can 'move peach tree to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take peach tree from table'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up peach tree
+INFO - Observation: You move the peach tree to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree in red box
+INFO - Observation: You move the peach tree to the red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move peach tree from red box to table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move peach tree from red box to table' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move peach tree from red box to table'.
+WARNING - Handling failure based on observation content for standard action 'move peach tree from red box to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree on table
+INFO - Observation: You move the peach tree to the table.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to red box
+INFO - Observation: Its not clear how to go to/through a red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take peach tree from table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: a dead peach tree, pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take peach tree from table' uses invalid syntax.
+Reason: The action 'take peach tree from table' is not supported in this environment.
+To get items from containers like 'table', you usually need to 'pick up table' first, or check if you can 'move peach tree to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take peach tree from table'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up peach tree
+INFO - Observation: You move the peach tree to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree in red box
+INFO - Observation: You move the peach tree to the red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move peach tree from red box to table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move peach tree from red box to table' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move peach tree from red box to table'.
+WARNING - Handling failure based on observation content for standard action 'move peach tree from red box to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree on table
+INFO - Observation: You move the peach tree to the table.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to red box
+INFO - Observation: Its not clear how to go to/through a red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take peach tree from table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: a dead peach tree, pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take peach tree from table' uses invalid syntax.
+Reason: The action 'take peach tree from table' is not supported in this environment.
+To get items from containers like 'table', you usually need to 'pick up table' first, or check if you can 'move peach tree to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take peach tree from table'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up peach tree
+INFO - Observation: You move the peach tree to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree in red box
+INFO - Observation: You move the peach tree to the red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move peach tree from red box to table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move peach tree from red box to table' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move peach tree from red box to table'.
+WARNING - Handling failure based on observation content for standard action 'move peach tree from red box to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree on table
+INFO - Observation: You move the peach tree to the table.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to red box
+INFO - Observation: Its not clear how to go to/through a red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take peach tree from table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: a dead peach tree, pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take peach tree from table' uses invalid syntax.
+Reason: The action 'take peach tree from table' is not supported in this environment.
+To get items from containers like 'table', you usually need to 'pick up table' first, or check if you can 'move peach tree to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take peach tree from table'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up peach tree
+INFO - Observation: You move the peach tree to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree in red box
+INFO - Observation: You move the peach tree to the red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move peach tree from red box to table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move peach tree from red box to table' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move peach tree from red box to table'.
+WARNING - Handling failure based on observation content for standard action 'move peach tree from red box to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree on table
+INFO - Observation: You move the peach tree to the table.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to red box
+INFO - Observation: Its not clear how to go to/through a red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take peach tree from table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: a dead peach tree, pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take peach tree from table' uses invalid syntax.
+Reason: The action 'take peach tree from table' is not supported in this environment.
+To get items from containers like 'table', you usually need to 'pick up table' first, or check if you can 'move peach tree to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take peach tree from table'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up peach tree
+INFO - Observation: You move the peach tree to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree in red box
+INFO - Observation: You move the peach tree to the red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move peach tree from red box to table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move peach tree from red box to table' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move peach tree from red box to table'.
+WARNING - Handling failure based on observation content for standard action 'move peach tree from red box to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree on table
+INFO - Observation: You move the peach tree to the table.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to red box
+INFO - Observation: Its not clear how to go to/through a red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take peach tree from table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: a dead peach tree, pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take peach tree from table' uses invalid syntax.
+Reason: The action 'take peach tree from table' is not supported in this environment.
+To get items from containers like 'table', you usually need to 'pick up table' first, or check if you can 'move peach tree to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take peach tree from table'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up peach tree
+INFO - Observation: You move the peach tree to the inventory.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree in red box
+INFO - Observation: You move the peach tree to the red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: focus on peach tree in red box
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'focus on peach tree in red box' was not executed as intended.
+Reason: The 'focus on' action has a specific purpose in this task. It should only be used for items related to: 'thing'.
+Using 'focus on peach tree in red box' is not the correct procedure here. Please choose another action or use 'focus on' with the correct item when it is ready.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted incorrect focus target action on 'peach tree in red box'. Task requires focus on items related to: 'thing'. Providing feedback.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: move peach tree from red box to table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing a dead peach tree)
+	a table. On the table is: pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'move peach tree from red box to table' did not succeed as expected in the bedroom (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'move peach tree from red box to table'.
+WARNING - Handling failure based on observation content for standard action 'move peach tree from red box to table'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: put peach tree on table
+INFO - Observation: You move the peach tree to the table.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to red box
+INFO - Observation: Its not clear how to go to/through a red box.
+INFO - Score: 25
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: take peach tree from table
+INFO - Observation: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a red box (containing nothing)
+	a table. On the table is: a dead peach tree, pollen.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'take peach tree from table' uses invalid syntax.
+Reason: The action 'take peach tree from table' is not supported in this environment.
+To get items from containers like 'table', you usually need to 'pick up table' first, or check if you can 'move peach tree to inventory'.
+Your action was not executed.
+INFO - Score: 25
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid action syntax: 'take peach tree from table'. 'take ... from ...' is not supported.
+
+
+INFO - ---------------------------------

@@ -1,0 +1,2032 @@
+INFO - ========== Task Name: grow-fruit | Task ID: 10-96 ==========
+INFO - Task: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a table. On the table is: a battery, a black wire, a orange light bulb, which is off, a orange wire, a red wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+You also see:
+	A door to the hallway (that is open)
+INFO - Agent Action: look around
+INFO - Observation: This room is called the workshop. In it, you see: 
+	the agent
+	a substance called air
+	a table. On the table is: a battery, a black wire, a orange light bulb, which is off, a orange wire, a red wire, a switch, which is off, a violet light bulb, which is off, a yellow light bulb, which is off.
+	a ultra low temperature freezer. The ultra low temperature freezer door is closed. 
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 2
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the hallway. In it, you see: 
+	the agent
+	a substance called air
+	a painting
+You also see:
+	A door to the art studio (that is open)
+	A door to the bedroom (that is open)
+	A door to the greenhouse (that is open)
+	A door to the kitchen (that is open)
+	A door to the living room (that is open)
+	A door to the workshop (that is open)
+INFO - Score: 4
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to living room
+INFO - Observation: You move to the living room.
+INFO - Score: 9
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: look in ultra low temperature freezer
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a seed jar (containing a orange seed, a orange seed, a orange seed, a orange seed, a orange seed)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'look in ultra low temperature freezer' did not succeed as expected in the living room (Observation: "No known action matches that input.").
+Reason: This could be due to an incorrect command, a non-existent or inaccessible object, or the action not being applicable in the current situation.
+Suggestion: Please check the command syntax, object names, your location, and the environment state.
+INFO - Score: 9
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'look in ultra low temperature freezer'.
+WARNING - Handling failure based on observation content for standard action 'look in ultra low temperature freezer'. Failure phrase: 'no known action'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up orange seed from seed jar
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a seed jar (containing a orange seed, a orange seed, a orange seed, a orange seed, a orange seed)
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'pick up orange seed from seed jar' failed (Observation: "No known action matches that input.").
+Reason: The action 'pick up orange seed from seed jar' might not be supported for this container.
+Suggestion: Try picking up the container itself first using 'pick up seed jar'. You might then be able to access its contents.
+INFO - Score: 9
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'pick up orange seed from seed jar'.
+WARNING - Handling failure based on observation content for standard action 'pick up orange seed from seed jar'. Failure phrase: 'no known action'.
+INFO - Detected failed 'pick up ... from ...' action for 'pick up orange seed from seed jar'. Suggesting 'pick up seed jar'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: pick up seed jar
+INFO - Observation: You move the seed jar to the inventory.
+INFO - Score: 11
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 11
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: look around
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Score: 11
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop' failed (Observation: "No known action matches that input.").
+Reason: You cannot go directly to 'workshop' from your current location (the living room). Movement is only possible between directly connected locations.
+Suggestion: Use 'look around' to see the available exits and connected locations from here.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Detected potential failure phrase 'no known action' in observation string for standard action 'go to workshop'.
+WARNING - Handling failure based on observation content for standard action 'go to workshop'. Failure phrase: 'no known action'.
+INFO - Detected failed 'go to workshop' action, likely due to non-adjacency from the living room.
+
+
+INFO - ---------------------------------
+INFO - Agent Action: go to workshop from living room
+INFO - Observation: This room is called the living room. In it, you see: 
+	the agent
+	a substance called air
+	a chair. On the chair is: nothing.
+	a couch. On the couch is: a white pillow.
+	a drawing
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+
+[Environment Feedback]: Your action 'go to workshop from living room' uses an invalid command format.
+Reason: The 'go to' action only accepts the destination location name (e.g., 'go to workshop' or 'go to hallway'). Specifying the source location using 'from living room' is not supported.
+Suggestion: Please use 'look around' to see valid exits from your current location (the living room) and then use 'go to [valid exit]'.
+INFO - Score: 11
+INFO - Done: False
+INFO - Log contents when executing `WrapStep`: WARNING - Intercepted invalid 'go to ... from ...' syntax: 'go to workshop from living room'.
+
+
+INFO - ---------------------------------

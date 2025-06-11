@@ -1,0 +1,132 @@
+INFO - ========== Task Name: measure-melting-point-known-substance | Task ID: 20-331 ==========
+INFO - Task: This room is called the bedroom. In it, you see: 
+	the agent
+	a substance called air
+	a bed. On the bed is: a mattress. On the mattress is: a white pillow..
+	a closet. The closet door is closed. 
+	a finger painting
+	a table. On the table is: nothing.
+You also see:
+	A door to the hallway (that is open)
+INFO - Agent Output: THOUGHT: I need to go to the kitchen to find the thermometer and tin, but first I should go to the hallway.
+ACTION: go to hallway
+INFO - Agent Action: go to hallway
+INFO - Observation: You move to the hallway.
+INFO - Score: 1
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I am now in the hallway and need to go to the kitchen next.
+ACTION: go to kitchen
+INFO - Agent Action: go to kitchen
+INFO - Observation: You move to the kitchen.
+INFO - Score: 6
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to find the thermometer in the kitchen.
+ACTION: look around
+INFO - Agent Action: look around
+INFO - Observation: This room is called the kitchen. In it, you see: 
+	the agent
+	a substance called air
+	a blue box (containing nothing)
+	a ceramic cup (containing a substance called tin)
+	a chair. On the chair is: nothing.
+	a counter. On the counter is: a bowl (containing a red apple, a banana, an orange, a potato), a drawer.
+	a cupboard. The cupboard door is closed. 
+	a freezer. The freezer door is closed. 
+	a fridge. The fridge door is closed. 
+	a glass jar (containing a substance called sodium chloride)
+	a lighter
+	a orange box (containing nothing)
+	a oven, which is turned off. The oven door is closed. 
+	a painting
+	a sink, which is turned off. In the sink is: nothing.
+	a substance called soap
+	a stopwatch, which is deactivated. 
+	a stove, which is turned off. On the stove is: nothing.
+	a table. On the table is: a glass cup (containing nothing).
+	a thermometer, currently reading a temperature of 10 degrees celsius
+You also see:
+	A door to the bathroom (that is open)
+	A door to the hallway (that is open)
+	A door to the outside (that is open)
+INFO - Score: 6
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The thermometer is on the table, I need to pick it up to measure the melting point of tin.
+ACTION: pick up thermometer
+INFO - Agent Action: pick up thermometer
+INFO - Observation: You move the thermometer to the inventory.
+INFO - Score: 7
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Now I need to find the tin to measure its melting point.
+ACTION: look at ceramic cup
+INFO - Agent Action: look at ceramic cup
+INFO - Observation: a ceramic cup (containing a substance called tin)
+INFO - Score: 7
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The tin is in the ceramic cup, I need to pick it up to measure its melting point.
+ACTION: pick up ceramic cup
+INFO - Agent Action: pick up ceramic cup
+INFO - Observation: You move the ceramic cup to the inventory.
+INFO - Score: 7
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Now that I have the thermometer and the tin, I need to measure the melting point of the tin.
+ACTION: use thermometer [on ceramic cup]
+INFO - Agent Action: use thermometer [on ceramic cup]
+INFO - Observation: No known action matches that input.
+INFO - Score: 7
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: I need to use the thermometer to measure the temperature of the tin in the ceramic cup.
+ACTION: use thermometer on tin
+INFO - Agent Action: use thermometer on tin
+INFO - Observation: the thermometer measures a temperature of 10 degrees celsius
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The temperature is at the melting point of tin, but I need to wait for the temperature to increase to confirm if it's melting.
+ACTION: wait [until temperature increases]
+INFO - Agent Action: wait [until temperature increases]
+INFO - Observation: No known action matches that input.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Since waiting is not an available action, I need to heat the tin to observe if it melts.
+ACTION: go to stove
+INFO - Agent Action: go to stove
+INFO - Observation: Its not clear how to go to/through a stove.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Since the stove can't be used directly, I need to find a way to heat the tin using another method.
+ACTION: go to oven
+INFO - Agent Action: go to oven
+INFO - Observation: Its not clear how to go to/through a oven.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: Since the oven can't be used directly, I need to find another heat source or method to heat the tin.
+ACTION: use lighter on tin
+INFO - Agent Action: use lighter on tin
+INFO - Observation: The lighter heats up the tin a small amount.
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The tin is heating up, I need to continue measuring the temperature with the thermometer.
+ACTION: use thermometer on tin
+INFO - Agent Action: use thermometer on tin
+INFO - Observation: the thermometer measures a temperature of 20 degrees celsius
+INFO - Score: 8
+INFO - Done: False
+INFO - ---------------------------------
+INFO - Agent Output: THOUGHT: The temperature of the tin is now above 10.0 degrees celsius, so I need to focus on the blue box.
+ACTION: focus on blue box
+INFO - Agent Action: focus on blue box
+INFO - Observation: You focus on the blue box.
+INFO - Score: -100
+INFO - Done: True
+INFO - ---------------------------------
