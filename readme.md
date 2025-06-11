@@ -15,10 +15,10 @@ Large‑language‑model (LLM) agents often fail because their *interfaces* (the
 
 ### Key Contributions
 
-1. **Problem Identification**: We show that *agent‑environment misalignment* is a major, previously under‑explored bottleneck across embodied, web‑navigation, and tool‑use domains.
-2. **Auto‑Aligned Interface Generation**: `InferRules` (static rules) + `WrapStep` (dynamic observations) are synthesized by an LLM‑powered *Analyzer* and *Optimizer* with on‑the‑fly experimental verification.
-3. **Plug‑and‑Play**: Implemented as a lightweight Python wrapper; *no* environment rewrite, *no* agent fine-tune.
-4. **Strong & General Improvements** – Up to **+45.67 %** absolute success‑rate gain on ALFWorld and consistent boosts on ScienceWorld, WebShop, and M3ToolEval. Gains transfer **across agents** and **across LLM backbones**.
+Our key contributions can be summarized as follows:
+- We identify and characterize the *agent-environment misalignmeent* problem, empirically demonstrating its prevalence across diverse domains and its role as a siggnificant bottleneck to agent performance.
+- We introduce *ALIGN*, the first framework automatically generates alligned interfaces to alleviate agent-environment misalignment, without modifying agent logic orenvironment code.
+- We demonstrate the effectiveness and generalizability of *ALIGN* across three domains, with up to a 45.67% success rate improvement on ALFWorld and consistent boosts on ScienceWorld, WebShop, and M3ToolEval.
 
 ---
 
